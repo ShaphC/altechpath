@@ -59,7 +59,7 @@ export default function SubscribeForm() {
 
   return (
     <form onSubmit={handleSubmit} className="w-full">
-      <div className="grid gap-3 sm:grid-cols-[1.6fr_1fr]">
+      <div className="flex w-full flex-col gap-3 md:flex-row md:items-stretch">
         <label className="sr-only" htmlFor={emailId}>
           Email address
         </label>
@@ -73,13 +73,13 @@ export default function SubscribeForm() {
           value={email}
           onChange={(event) => setEmail(event.target.value)}
           placeholder="Your email address"
-          className="min-h-14 w-full rounded-xl border border-slate-300 bg-white px-5 text-base outline-none transition focus:border-violet-600 focus:ring-2 focus:ring-violet-100"
+          className="h-14 min-w-0 w-full flex-1 rounded-xl border border-slate-300 bg-white px-5 text-base text-[#0b1438] outline-none transition focus:border-violet-600 focus:ring-2 focus:ring-violet-100"
         />
 
         <button
           type="submit"
           disabled={loading || !consent}
-          className="flex min-h-14 items-center justify-center gap-3 rounded-xl bg-violet-700 px-5 font-bold text-white transition hover:bg-violet-800 disabled:cursor-not-allowed disabled:opacity-60"
+          className="flex h-14 w-full shrink-0 items-center justify-center gap-3 rounded-xl bg-[#6025dc] px-6 text-base font-bold text-white transition hover:bg-[#5016c9] disabled:cursor-not-allowed disabled:opacity-60 md:w-[290px]"
         >
           {loading ? (
             <>
