@@ -17,7 +17,7 @@ export const siteConfig = {
 
   creator: {
     name: "",
-    heading: "About the creator",
+    heading: "Who made this",
     description:
       "I created Alternative Tech Path to help people move beyond tutorials and turn their technical knowledge into practical, real-world projects. My background spans software development and IT, and I enjoy breaking down the process of making ideas real.",
     image: "/images/creator.png",

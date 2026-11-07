@@ -7,10 +7,44 @@ import { siteConfig } from "@/lib/site-config";
 
 function BrandMark() {
   return (
-    <div className="relative h-9 w-12 shrink-0" aria-hidden="true">
-      <span className="absolute bottom-0 left-0 h-[90%] w-[70%] bg-violet-700 [clip-path:polygon(50%_0,100%_100%,0_100%)]" />
-      <span className="absolute bottom-0 left-[40%] h-[70%] w-[60%] bg-sky-500 [clip-path:polygon(50%_0,100%_100%,0_100%)]" />
-    </div>
+    <section id="home" className="scroll-mt-20">
+      <div className="relative h-9 w-12 shrink-0" aria-hidden="true">
+        <span className="absolute bottom-0 left-0 h-[90%] w-[70%] bg-violet-700 [clip-path:polygon(50%_0,100%_100%,0_100%)]" />
+        <span className="absolute bottom-0 left-[40%] h-[70%] w-[60%] bg-sky-500 [clip-path:polygon(50%_0,100%_100%,0_100%)]" />
+      </div>
+    </section>
+  );
+}
+
+function Navbar() {
+  return (
+    <nav
+      aria-label="Main navigation"
+      className="sticky top-0 z-50 -mx-5 border-b border-[#e8dafa] bg-white/95 px-4 py-4 backdrop-blur-md sm:-mx-8 sm:px-8 lg:-mx-10 lg:px-10"
+    >
+      <div className="flex items-center justify-center gap-5 sm:gap-8">
+        <a
+          href="#home"
+          className="text-[13px] font-semibold text-[#6025dc] hover:text-[#5016c9] sm:text-sm"
+        >
+          Home
+        </a>
+
+        <a
+          href="#creator"
+          className="text-[13px] font-medium text-[#263254] hover:text-[#6025dc] sm:text-sm"
+        >
+          Who made this
+        </a>
+
+        <a
+          href="#what-to-expect"
+          className="text-[13px] font-medium text-[#263254] hover:text-[#6025dc] sm:text-sm"
+        >
+          What to Expect
+        </a>
+      </div>
+    </nav>
   );
 }
 
@@ -65,7 +99,10 @@ function CreatorSection() {
   const creator = siteConfig.creator;
 
   return (
-    <section className="mt-10 border-t border-[#e8dafa] pt-9 sm:mt-12">
+    <section
+      id="creator"
+      className="mt-10 border-t border-[#e8dafa] pt-9 sm:mt-12"
+    >
       <div className="mx-auto flex max-w-[800px] flex-col items-center gap-5 sm:flex-row sm:items-center sm:gap-9">
         <div className="relative flex h-[115px] w-[115px] shrink-0 items-center justify-center overflow-hidden rounded-full bg-[#eee8fa] sm:h-[145px] sm:w-[145px]">
           {creator.image ? (
@@ -97,7 +134,10 @@ function CreatorSection() {
 
 function LessonsSection() {
   return (
-    <section className="mt-10 border-t border-[#e8dafa] pt-9 sm:mt-12">
+    <section
+      id="what-to-expect"
+      className="mt-10 border-t border-[#e8dafa] pt-9 sm:mt-12"
+    >
       <h2 className="mb-8 text-center text-[29px] font-black leading-tight tracking-[-0.05em] text-[#0b1438] sm:text-[38px]">
         What You&apos;ll Learn in 5 Days
       </h2>
@@ -144,6 +184,8 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-[#e9edf5] text-[#0b1438]">
       <div className="mx-auto min-h-screen max-w-[860px] border-x border-[#cfd6e3] bg-white px-5 pb-10 sm:px-8 lg:px-10">
+        <Navbar />
+
         <Header />
 
         <Hero />
