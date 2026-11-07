@@ -1,69 +1,132 @@
-import Image from "next/image";
+import { BookOpen, Code2 } from "lucide-react";
+import { CourseBook } from "@/components/course-book";
+import SubscribeForm from "@/components/subscribe-form";
+import { siteConfig } from "@/lib/site-config";
+
+function Logo() {
+  return (
+    <div className="flex items-center justify-center gap-3">
+      <div className="relative h-9 w-11">
+        <span className="absolute bottom-0 left-0 h-8 w-7 bg-violet-700 [clip-path:polygon(50%_0,100%_100%,0_100%)]" />
+        <span className="absolute bottom-0 left-4 h-6 w-7 bg-blue-500 [clip-path:polygon(50%_0,100%_100%,0_100%)]" />
+      </div>
+
+      <span className="text-base font-extrabold tracking-[0.12em] text-[#0b1438] sm:text-xl">
+        {siteConfig.brand.name.toUpperCase()}
+      </span>
+    </div>
+  );
+}
+
+function CreatorSection() {
+  return (
+    <section className="mt-16 flex flex-col items-center gap-6 sm:flex-row sm:items-start sm:gap-9">
+      <div className="flex h-32 w-32 shrink-0 items-center justify-center rounded-full bg-violet-100">
+        <Code2 className="h-12 w-12 text-violet-700" />
+      </div>
+
+      <div className="max-w-2xl text-center sm:text-left">
+        <h2 className="text-3xl font-black tracking-tight">
+          {siteConfig.creator.heading}
+        </h2>
+
+        <p className="mt-3 text-lg leading-relaxed text-[#263254]">
+          {siteConfig.creator.description}
+        </p>
+      </div>
+    </section>
+  );
+}
+
+function LessonsSection() {
+  return (
+    <section className="mx-auto mt-20 max-w-4xl">
+      <h2 className="mb-9 text-center text-3xl font-black tracking-tight sm:text-4xl">
+        What You&apos;ll Learn in 5 Days
+      </h2>
+
+      <div>
+        {siteConfig.lessons.map((lesson) => (
+          <div
+            key={lesson.day}
+            className="grid grid-cols-[76px_1fr] gap-3 py-3 sm:grid-cols-[115px_1fr] sm:gap-7"
+          >
+            <div className="flex h-12 items-center justify-center rounded-xl bg-violet-100 text-sm font-extrabold text-violet-700 sm:text-base">
+              Day {lesson.day}
+            </div>
+
+            <div className="border-b border-violet-100 pb-4">
+              <h3 className="text-lg font-extrabold sm:text-xl">
+                {lesson.title}
+              </h3>
+
+              <p className="mt-1 leading-relaxed text-[#263254]">
+                {lesson.description}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main className="min-h-screen bg-white text-[#0b1438]">
+      <div className="mx-auto max-w-5xl px-5 pb-16 pt-7 sm:px-8">
+        <header className="mb-12">
+          <Logo />
+        </header>
+
+        {/* Hero */}
+        <section className="grid items-center gap-9 lg:grid-cols-[1fr_260px] lg:gap-14">
+          {/* Book first on mobile, right on desktop */}
+          <div className="order-1 lg:order-2">
+            <CourseBook />
+          </div>
+
+          {/* Text second on mobile, left on desktop */}
+          <div className="order-2 lg:order-1">
+            <span className="inline-flex rounded-xl bg-violet-100 px-4 py-2 text-sm font-extrabold tracking-wide text-violet-700">
+              {siteConfig.course.badge}
+            </span>
+
+            <h1 className="mt-5 text-4xl font-black leading-[1.09] tracking-tight sm:text-5xl lg:text-[54px]">
+              {siteConfig.course.headline}
+            </h1>
+
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-[#263254]">
+              {siteConfig.course.description}
+            </p>
+          </div>
+        </section>
+
+        {/* First signup */}
+        <div className="mt-11">
+          <SubscribeForm />
+        </div>
+
+        {/* Creator */}
+        <CreatorSection />
+
+        {/* Five-day curriculum */}
+        <LessonsSection />
+
+        {/* Second signup */}
+        <section className="mt-16">
+          <SubscribeForm />
+
+          <p className="mt-4 text-center text-sm text-[#455276]">
+            <BookOpen className="mr-1 inline h-4 w-4" />
+            {siteConfig.course.footerText}
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+        </section>
+
+        <footer className="mt-16 text-center text-sm text-slate-500">
+          © {siteConfig.brand.name}
+        </footer>
+      </div>
+    </main>
   );
 }
