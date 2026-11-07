@@ -16,7 +16,7 @@ function BrandMark() {
 
 function Header() {
   return (
-    <header className="flex justify-center pb-12 pt-7 sm:pb-14">
+    <header className="flex justify-center pb-4 pt-7 sm:pb-3">
       <div className="flex items-center justify-center gap-3">
         <BrandMark />
 
@@ -54,7 +54,7 @@ function Hero() {
       </div>
 
       {/* First email signup */}
-      <div className="mt-9 w-full sm:mt-11">
+      <div className="mt-9 w-full sm:mt-0">
         <SubscribeForm />
       </div>
     </section>
@@ -142,8 +142,8 @@ function FinalSignup() {
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white text-[#0b1438]">
-      <div className="mx-auto max-w-[940px] px-5 pb-10 sm:px-8">
+    <main className="min-h-screen bg-[#e9edf5] text-[#0b1438]">
+      <div className="mx-auto min-h-screen max-w-[860px] border-x border-[#cfd6e3] bg-white px-5 pb-10 sm:px-8 lg:px-10">
         <Header />
 
         <Hero />

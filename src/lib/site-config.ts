@@ -20,7 +20,7 @@ export const siteConfig = {
     heading: "About the creator",
     description:
       "I created Alternative Tech Path to help people move beyond tutorials and turn their technical knowledge into practical, real-world projects. My background spans software development and IT, and I enjoy breaking down the process of making ideas real.",
-    image: "",
+    image: "/images/creator.png",
   },
 
   lessons: [
