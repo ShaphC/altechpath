@@ -59,7 +59,8 @@ export default function SubscribeForm() {
 
   return (
     <form onSubmit={handleSubmit} className="w-full">
-      <div className="flex w-full flex-col gap-3 md:flex-row md:items-stretch">
+      {/* Email input and button */}
+      <div className="grid w-full grid-cols-1 gap-3 md:grid-cols-[minmax(0,1fr)_290px]">
         <label className="sr-only" htmlFor={emailId}>
           Email address
         </label>
@@ -73,13 +74,13 @@ export default function SubscribeForm() {
           value={email}
           onChange={(event) => setEmail(event.target.value)}
           placeholder="Your email address"
-          className="h-14 min-w-0 w-full flex-1 rounded-xl border border-slate-300 bg-white px-5 text-base text-[#0b1438] outline-none transition focus:border-violet-600 focus:ring-2 focus:ring-violet-100"
+          className="block h-14 w-full min-w-0 rounded-xl border border-slate-300 bg-white px-5 text-base text-[#0b1438] outline-none transition focus:border-violet-600 focus:ring-2 focus:ring-violet-100"
         />
 
         <button
           type="submit"
           disabled={loading || !consent}
-          className="flex h-14 w-full shrink-0 items-center justify-center gap-3 rounded-xl bg-[#6025dc] px-6 text-base font-bold text-white transition hover:bg-[#5016c9] disabled:cursor-not-allowed disabled:opacity-60 md:w-[290px]"
+          className="flex h-14 w-full min-w-0 items-center justify-center gap-3 rounded-xl bg-[#6025dc] px-6 text-base font-bold text-white transition hover:bg-[#5016c9] disabled:cursor-not-allowed disabled:opacity-60"
         >
           {loading ? (
             <>
@@ -95,20 +96,23 @@ export default function SubscribeForm() {
         </button>
       </div>
 
+      {/* Consent checkbox */}
       <label className="mt-3 flex items-start gap-2 text-sm text-slate-600">
         <input
           type="checkbox"
           checked={consent}
           onChange={(event) => setConsent(event.target.checked)}
-          className="mt-1 accent-violet-700"
+          className="mt-1 h-4 w-4 shrink-0 accent-violet-700"
           required
         />
+
         <span>
           I agree to receive the free five-day email course from Alternative
           Tech Path. I can unsubscribe at any time.
         </span>
       </label>
 
+      {/* Success or error message */}
       {message && (
         <p
           role="status"
