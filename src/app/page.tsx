@@ -7,7 +7,7 @@ import { siteConfig } from "@/lib/site-config";
 
 function BrandMark() {
   return (
-    <section id="home" className="scroll-mt-20">
+    <section id="home" className="scroll-mt-20 pt-5 sm:pt-8">
       <div className="relative h-9 w-12 shrink-0" aria-hidden="true">
         <span className="absolute bottom-0 left-0 h-[90%] w-[70%] bg-violet-700 [clip-path:polygon(50%_0,100%_100%,0_100%)]" />
         <span className="absolute bottom-0 left-[40%] h-[70%] w-[60%] bg-sky-500 [clip-path:polygon(50%_0,100%_100%,0_100%)]" />
