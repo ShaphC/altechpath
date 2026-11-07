@@ -3,8 +3,10 @@
 import { FormEvent, useId, useState } from "react";
 import { ArrowRight, Loader2 } from "lucide-react";
 import { siteConfig } from "@/lib/site-config";
+import { useRouter } from "next/navigation";
 
 export default function SubscribeForm() {
+  const router = useRouter();
   const emailId = useId();
 
   const [email, setEmail] = useState("");
@@ -40,12 +42,8 @@ export default function SubscribeForm() {
         throw new Error(data.error || "Something went wrong.");
       }
 
-      setSuccess(true);
-      setMessage(
-        "Thanks! Your signup was received. Check your inbox for the course.",
-      );
-      setEmail("");
-      setConsent(false);
+      router.push("/thanks");
+      return;
     } catch (error) {
       setMessage(
         error instanceof Error

@@ -1,8 +1,6 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 
-export const runtime = "nodejs";
-
 const subscribeSchema = z.object({
   email: z.email().max(254),
   consent: z.literal(true),

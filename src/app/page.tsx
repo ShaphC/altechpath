@@ -3,11 +3,13 @@ import { Code2 } from "lucide-react";
 
 import { CourseBook } from "@/components/course-book";
 import SubscribeForm from "@/components/subscribe-form";
+import SectionNavbar from "@/components/section-navbar";
 import { siteConfig } from "@/lib/site-config";
 
 function BrandMark() {
   return (
-    <section id="home" className="scroll-mt-20 pt-5 sm:pt-8">
+    <section id="home" className="pt-5 sm:pt-8">
+      {" "}
       <div className="relative h-9 w-12 shrink-0" aria-hidden="true">
         <span className="absolute bottom-0 left-0 h-[90%] w-[70%] bg-violet-700 [clip-path:polygon(50%_0,100%_100%,0_100%)]" />
         <span className="absolute bottom-0 left-[40%] h-[70%] w-[60%] bg-sky-500 [clip-path:polygon(50%_0,100%_100%,0_100%)]" />
@@ -50,14 +52,31 @@ function Navbar() {
 
 function Header() {
   return (
-    <header className="flex justify-center pb-0 pt-7 sm:pb-3">
-      <div className="flex items-center justify-center gap-3">
-        <BrandMark />
+    <header
+      id="site-navbar"
+      className="sticky top-0 z-50 -mx-5 border-b border-[#e8dafa] bg-white/95 px-4 backdrop-blur-md sm:-mx-8 sm:px-6 lg:-mx-10 lg:px-8"
+    >
+      <nav
+        aria-label="Main navigation"
+        className="flex min-h-[68px] items-center justify-between gap-3"
+      >
+        <a
+          href="/"
+          aria-label="Alternative Tech Path — Home"
+          className="flex shrink-0 items-center gap-2"
+        >
+          {/* <div className="scale-[0.75] sm:scale-90">
+            <BrandMark />
+          </div> */}
 
-        <span className="text-[14px] font-black tracking-[0.07em] text-[#0b1438] sm:text-[21px] sm:tracking-[0.09em]">
-          {siteConfig.brand.name.toUpperCase()}
-        </span>
-      </div>
+          <span className="text-[10px] font-black leading-[1.2] tracking-[0.035em] text-[#0b1438] sm:text-[14px]">
+            ALTERNATIVE
+            <span className="block">TECH PATH</span>
+          </span>
+        </a>
+
+        {/* <SectionNavbar /> */}
+      </nav>
     </header>
   );
 }
@@ -182,9 +201,9 @@ function FinalSignup() {
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#e9edf5] text-[#0b1438]">
-      <div className="mx-auto min-h-screen max-w-[860px] border-x border-[#cfd6e3] bg-white px-5 pb-10 sm:px-8 lg:px-10">
-        <Navbar />
+    <main className="min-h-screen bg-[#e9edf5] text-[#0b1438] lg:py-6">
+      <div className="mx-auto min-h-screen max-w-[860px] border-x border-[#cfd6e3] bg-white px-5 pb-10 sm:px-8 lg:overflow-clip lg:rounded-[24px] lg:border lg:px-10">
+        {/* <Navbar /> */}
 
         <Header />
 
