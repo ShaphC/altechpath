@@ -16,7 +16,7 @@ function BrandMark() {
 
 function Header() {
   return (
-    <header className="flex justify-center pb-4 pt-7 sm:pb-3">
+    <header className="flex justify-center pb-0 pt-7 sm:pb-3">
       <div className="flex items-center justify-center gap-3">
         <BrandMark />
 
@@ -31,7 +31,7 @@ function Header() {
 function Hero() {
   return (
     <section>
-      <div className="grid items-center gap-7 lg:grid-cols-[minmax(0,1fr)_270px] lg:gap-10">
+      <div className="grid items-center gap-1 sm:gap-7 lg:grid-cols-[minmax(0,1fr)_270px] lg:gap-10">
         {/* Book first on mobile, right on desktop */}
         <div className="order-1 min-w-0 lg:order-2">
           <CourseBook />
