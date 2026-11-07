@@ -68,6 +68,8 @@ export default function SubscribeForm() {
         <input
           id={emailId}
           type="email"
+          data-lpignore="true"
+          data-1p-ignore
           autoComplete="email"
           required
           maxLength={254}
