@@ -1,6 +1,6 @@
 export const siteConfig = {
   brand: {
-    name: "Alternative Tech Path",
+    name: "AlternativeTechPath",
     shortName: "ATP",
   },
 

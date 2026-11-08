@@ -8,45 +8,11 @@ import { siteConfig } from "@/lib/site-config";
 
 function BrandMark() {
   return (
-    <section id="home" className="pt-5 sm:pt-8">
-      {" "}
-      <div className="relative h-9 w-12 shrink-0" aria-hidden="true">
-        <span className="absolute bottom-0 left-0 h-[90%] w-[70%] bg-violet-700 [clip-path:polygon(50%_0,100%_100%,0_100%)]" />
-        <span className="absolute bottom-0 left-[40%] h-[70%] w-[60%] bg-sky-500 [clip-path:polygon(50%_0,100%_100%,0_100%)]" />
-      </div>
-    </section>
-  );
-}
+    <div className="relative h-8 w-9 shrink-0" aria-hidden="true">
+      <span className="absolute bottom-0 left-0 h-[90%] w-[70%] bg-violet-700 [clip-path:polygon(50%_0,100%_100%,0_100%)]" />
 
-function Navbar() {
-  return (
-    <nav
-      aria-label="Main navigation"
-      className="sticky top-0 z-50 -mx-5 border-b border-[#e8dafa] bg-white/95 px-4 py-4 backdrop-blur-md sm:-mx-8 sm:px-8 lg:-mx-10 lg:px-10"
-    >
-      <div className="flex items-center justify-center gap-5 sm:gap-8">
-        <a
-          href="#home"
-          className="text-[13px] font-semibold text-[#6025dc] hover:text-[#5016c9] sm:text-sm"
-        >
-          Home
-        </a>
-
-        <a
-          href="#creator"
-          className="text-[13px] font-medium text-[#263254] hover:text-[#6025dc] sm:text-sm"
-        >
-          Who made this
-        </a>
-
-        <a
-          href="#what-to-expect"
-          className="text-[13px] font-medium text-[#263254] hover:text-[#6025dc] sm:text-sm"
-        >
-          What to Expect
-        </a>
-      </div>
-    </nav>
+      <span className="absolute bottom-0 left-[40%] h-[70%] w-[60%] bg-sky-500 [clip-path:polygon(50%_0,100%_100%,0_100%)]" />
+    </div>
   );
 }
 
@@ -54,28 +20,33 @@ function Header() {
   return (
     <header
       id="site-navbar"
-      className="sticky top-0 z-50 -mx-5 border-b border-[#e8dafa] bg-white/95 px-4 backdrop-blur-md sm:-mx-8 sm:px-6 lg:-mx-10 lg:px-8"
+      className="sticky top-0 z-50 -mx-5 bg-white/95 px-5 backdrop-blur-md sm:-mx-8 sm:px-8 lg:-mx-10 lg:px-10"
     >
       <nav
         aria-label="Main navigation"
-        className="flex min-h-[68px] items-center justify-between gap-3"
+        className="flex min-h-[76px] items-center justify-between gap-3"
       >
+        {/* Brand */}
         <a
           href="/"
           aria-label="Alternative Tech Path — Home"
-          className="flex shrink-0 items-center gap-2"
+          className="flex shrink-0 items-center gap-2.5"
         >
-          {/* <div className="scale-[0.75] sm:scale-90">
-            <BrandMark />
-          </div> */}
+          <BrandMark />
 
-          <span className="text-[10px] font-black leading-[1.2] tracking-[0.035em] text-[#0b1438] sm:text-[14px]">
-            ALTERNATIVE
-            <span className="block">TECH PATH</span>
-          </span>
+          <div className="flex flex-col justify-center">
+            <span className="text-[11px] font-black leading-[1.15] tracking-[0.035em] text-[#0b1438] sm:text-[15px]">
+              ALTERNATIVE
+            </span>
+
+            <span className="text-[11px] font-black leading-[1.15] tracking-[0.035em] text-[#0b1438] sm:text-[15px]">
+              TECH PATH
+            </span>
+          </div>
         </a>
 
-        {/* <SectionNavbar /> */}
+        {/* Navigation */}
+        <SectionNavbar />
       </nav>
     </header>
   );
@@ -203,8 +174,6 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-[#e9edf5] text-[#0b1438] lg:py-6">
       <div className="mx-auto min-h-screen max-w-[860px] border-x border-[#cfd6e3] bg-white px-5 pb-10 sm:px-8 lg:overflow-clip lg:rounded-[24px] lg:border lg:px-10">
-        {/* <Navbar /> */}
-
         <Header />
 
         <Hero />
