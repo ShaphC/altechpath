@@ -40,3 +40,136 @@ input {
   background: #e6d7ff;
   color: #32106d;
 }
+
+/* Alternative Tech Path — main website theme */
+
+.atp-site {
+  --site-bg: #f0f2fa;
+  --site-surface: #ffffff;
+  --site-text: #0b1438;
+  --site-muted: #53617d;
+  --site-border: #dfe3f0;
+  --site-soft: #f4efff;
+  --site-accent: #6025dc;
+  --site-accent-hover: #5016c9;
+  --site-hero: #f8f5ff;
+
+  background: var(--site-bg);
+  color: var(--site-text);
+  min-height: 100vh;
+  transition:
+    background-color 200ms,
+    color 200ms;
+}
+
+.site-dark .atp-site {
+  --site-bg: #090e20;
+  --site-surface: #141c33;
+  --site-text: #f5f7ff;
+  --site-muted: #b2bfd9;
+  --site-border: #303a55;
+  --site-soft: #242045;
+  --site-accent: #9065f7;
+  --site-accent-hover: #a785ff;
+  --site-hero: #1b2140;
+}
+
+.atp-site .atp-card {
+  background: var(--site-surface);
+  border: 1px solid var(--site-border);
+  border-radius: 18px;
+  overflow: hidden;
+  transition:
+    border-color 200ms,
+    transform 200ms;
+}
+
+.atp-site .atp-card:hover {
+  border-color: var(--site-accent);
+  transform: translateY(-3px);
+}
+
+.atp-site .atp-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 20px;
+  border-radius: 11px;
+  background: var(--site-accent);
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.atp-site .atp-primary:hover {
+  background: var(--site-accent-hover);
+}
+
+.atp-site .atp-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 19px;
+  border: 1px solid var(--site-border);
+  border-radius: 11px;
+  color: var(--site-text);
+  background: var(--site-surface);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.atp-site .atp-secondary:hover {
+  border-color: var(--site-accent);
+}
+
+.atp-site .atp-preview {
+  background: linear-gradient(135deg, #eee6ff, #f8f6ff 55%, #dff7ff);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .atp-site *,
+  .atp-site *::before,
+  .atp-site *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@keyframes testimonial-scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes testimonial-scroll-right {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.testimonial-track {
+  animation: testimonial-scroll-left 45s linear infinite;
+}
+
+.testimonial-track.testimonial-reverse {
+  animation-name: testimonial-scroll-right;
+}
+
+.testimonial-track:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .testimonial-track {
+    animation: none;
+  }
+}
