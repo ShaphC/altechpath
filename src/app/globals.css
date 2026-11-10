@@ -1760,3 +1760,82 @@ textarea {
     z-index: 100;
   }
 }
+
+/* ========================================
+   MOBILE NAVBAR — SINGLE SOURCE OF TRUTH
+======================================== */
+@media (max-width: 767px) {
+  .atp-site .atp-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: auto;
+    z-index: 90;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    border-radius: 0;
+    transition:
+      top 250ms ease,
+      left 250ms ease,
+      width 250ms ease,
+      border-radius 250ms ease,
+      background-color 250ms ease,
+      box-shadow 250ms ease;
+  }
+
+  .atp-site .atp-header.atp-header--floating {
+    top: 10px;
+    left: 12px;
+    right: auto;
+    width: calc(100% - 24px);
+    max-width: calc(100% - 24px);
+    margin: 0;
+    border: 1px solid var(--glass-border);
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--site-surface) 88%, transparent);
+    backdrop-filter: blur(22px) saturate(160%);
+    -webkit-backdrop-filter: blur(22px) saturate(160%);
+    box-shadow:
+      inset 0 1px 0 var(--depth-highlight),
+      0 8px 20px rgba(4, 24, 47, 0.12),
+      0 20px 45px rgba(4, 24, 47, 0.2);
+  }
+
+  .atp-site .atp-header.atp-header--floating .atp-header-inner {
+    min-height: 62px;
+    padding-inline: 16px;
+  }
+}
+
+/* Service cards */
+.atp-site .atp-services-grid .atp-service-card {
+  overflow: hidden;
+  border-radius: 22px;
+}
+
+.atp-site .atp-services-grid .atp-service-card > div:first-child,
+.atp-site .atp-services-grid .atp-service-icon {
+  margin-top: 0;
+}
+
+/* Example preview spacing */
+.atp-site .atp-examples-grid .atp-card {
+  padding-top: 14px;
+}
+
+.atp-site .atp-examples-grid .atp-preview-stage {
+  margin-inline: 14px;
+  border-radius: 14px;
+}
+
+@media (max-width: 639px) {
+  .atp-site .atp-examples-grid .atp-card {
+    padding-top: 12px;
+  }
+
+  .atp-site .atp-examples-grid .atp-preview-stage {
+    margin-inline: 12px;
+  }
+}

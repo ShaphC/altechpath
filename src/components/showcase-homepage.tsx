@@ -32,10 +32,6 @@ const navigation = [
   { label: "Contact", href: "#contact" },
 ];
 
-/* ========================================
-   BRAND
-======================================== */
-
 function Brand() {
   return (
     <Link
@@ -47,7 +43,6 @@ function Brand() {
         <span className="absolute bottom-0 left-0 h-[90%] w-[70%] bg-[#1768E8] [clip-path:polygon(50%_0,100%_100%,0_100%)]" />
         <span className="absolute bottom-0 left-[40%] h-[70%] w-[60%] bg-[#3DE0D0] [clip-path:polygon(50%_0,100%_100%,0_100%)]" />
       </div>
-
       <span className="text-[12px] font-black leading-[1.15] tracking-[0.035em] sm:text-[14px]">
         ALTERNATIVE
         <span className="block">TECH PATH</span>
@@ -55,10 +50,6 @@ function Brand() {
     </Link>
   );
 }
-
-/* ========================================
-   DETACHABLE NAVIGATION
-======================================== */
 
 function Header() {
   const [open, setOpen] = useState(false);
@@ -69,17 +60,13 @@ function Header() {
 
     function updateScroll() {
       cancelAnimationFrame(frame);
-
       frame = requestAnimationFrame(() => {
-        setFloating(window.scrollY > 48);
+        setFloating(window.scrollY > 0);
       });
     }
 
     updateScroll();
-
-    window.addEventListener("scroll", updateScroll, {
-      passive: true,
-    });
+    window.addEventListener("scroll", updateScroll, { passive: true });
 
     return () => {
       cancelAnimationFrame(frame);
@@ -131,7 +118,6 @@ function Header() {
                 </a>
               ))}
             </nav>
-
             <SiteTheme />
           </div>
 
@@ -176,7 +162,6 @@ function Header() {
         >
           <div className="flex items-center justify-between">
             <Brand />
-
             <button
               type="button"
               aria-label="Close menu"
@@ -213,10 +198,6 @@ function Header() {
   );
 }
 
-/* ========================================
-   SHARED BROWSER FRAME
-======================================== */
-
 function BrowserWindow({
   children,
   address = "example.com",
@@ -234,20 +215,13 @@ function BrowserWindow({
           <span className="atp-browser-dot bg-[#ffc56a]" />
           <span className="atp-browser-dot bg-[#68d8a0]" />
         </div>
-
         <div className="atp-browser-address">{address}</div>
-
         <div className="w-[33px] shrink-0" />
       </div>
-
       {children}
     </div>
   );
 }
-
-/* ========================================
-   LANDING PAGE SCREEN
-======================================== */
 
 function LandingScreen({ hero = false }: { hero?: boolean }) {
   return (
@@ -259,12 +233,10 @@ function LandingScreen({ hero = false }: { hero?: boolean }) {
           <div className="flex h-5 w-5 items-center justify-center rounded-md bg-[#236BDF] text-white">
             <Sparkles className="h-3 w-3" />
           </div>
-
           <span className="text-[9px] font-black tracking-tight">
             THE GROWTH GUIDE
           </span>
         </div>
-
         <div className="flex items-center gap-3 text-[7px] font-semibold text-slate-500">
           <span>About</span>
           <span>Resources</span>
@@ -302,7 +274,6 @@ function LandingScreen({ hero = false }: { hero?: boolean }) {
             <div className="flex h-7 min-w-0 flex-1 items-center rounded-md border border-slate-200 bg-white px-2 text-[8px] text-slate-400">
               Your email address
             </div>
-
             <div className="flex h-7 items-center justify-center rounded-md bg-[#236BDF] px-3 text-[8px] font-bold text-white">
               Get started
             </div>
@@ -316,24 +287,20 @@ function LandingScreen({ hero = false }: { hero?: boolean }) {
 
         <div className="relative flex min-h-[125px] items-center justify-center sm:min-h-[160px]">
           <div className="absolute h-28 w-28 rounded-full bg-[#87E8F2]/50 blur-2xl" />
-
           <div className="relative w-[76%] max-w-[145px] -rotate-6 rounded-xl border border-[#D7E7F4] bg-white p-3 shadow-xl">
             <div className="mb-3 flex h-8 w-8 items-center justify-center rounded-lg bg-[#DCEFFA]">
               <BookOpen className="h-4 w-4 text-[#236BDF]" />
             </div>
-
             <p className="text-[8px] font-black text-[#123B69]">
               5 DAYS TO
               <br />
               BETTER IDEAS
             </p>
-
             <div className="mt-3 space-y-1.5">
               <div className="h-1.5 w-full rounded bg-[#DCEFFA]" />
               <div className="h-1.5 w-4/5 rounded bg-[#DCEFFA]" />
               <div className="h-1.5 w-3/5 rounded bg-sky-100" />
             </div>
-
             <div className="mt-3 h-1.5 w-12 rounded bg-[#236BDF]" />
           </div>
         </div>
@@ -341,10 +308,6 @@ function LandingScreen({ hero = false }: { hero?: boolean }) {
     </div>
   );
 }
-
-/* ========================================
-   ORIGINAL HERO LAPTOP
-======================================== */
 
 function HeroLaptop() {
   return (
@@ -354,33 +317,41 @@ function HeroLaptop() {
       aria-label="Illustrative landing page displayed on a laptop"
     >
       <div className="atp-laptop-glow" />
-
       <div className="atp-laptop-perspective">
         <div className="atp-laptop relative w-full">
           <div className="atp-laptop-lid">
             <div className="atp-laptop-camera" />
-
             <div className="atp-laptop-screen">
               <LandingScreen hero />
             </div>
           </div>
-
           <div className="atp-laptop-base">
             <div className="atp-laptop-notch" />
           </div>
-
           <div className="atp-laptop-bottom" />
         </div>
       </div>
 
       <div className="atp-hero-float atp-hero-float--left" aria-hidden="true">
-        <span className="atp-float-icon"><Mail size={16} /></span>
-        <span><strong>5-day course</strong><small>Ready to launch</small></span>
+        <span className="atp-float-icon">
+          <Mail size={16} />
+        </span>
+        <span>
+          <strong>5-day course</strong>
+          <small>Ready to launch</small>
+        </span>
       </div>
+
       <div className="atp-hero-float atp-hero-float--right" aria-hidden="true">
-        <span className="atp-float-icon atp-float-icon--green"><Check size={16} /></span>
-        <span><strong>Signup connected</strong><small>Audience-ready</small></span>
+        <span className="atp-float-icon atp-float-icon--green">
+          <Check size={16} />
+        </span>
+        <span>
+          <strong>Signup connected</strong>
+          <small>Audience-ready</small>
+        </span>
       </div>
+
       <div className="pointer-events-none absolute -right-1 top-[10%] hidden items-center gap-2 rounded-xl border border-white/30 bg-white px-3 py-2 text-[#123B69] shadow-xl sm:flex atp-original-hero-badge">
         <CheckCircle2 className="h-4 w-4 text-emerald-500" />
         <span className="text-[10px] font-bold">Ready to engage</span>
@@ -388,10 +359,6 @@ function HeroLaptop() {
     </div>
   );
 }
-
-/* ========================================
-   HERO
-======================================== */
 
 function Hero({ variant }: { variant: HomepageVariant }) {
   const modern = variant === "modern";
@@ -407,7 +374,6 @@ function Hero({ variant }: { variant: HomepageVariant }) {
       {modern && (
         <>
           <div className="pointer-events-none absolute -right-20 -top-24 h-[350px] w-[350px] rounded-full bg-cyan-400/20 blur-[100px]" />
-
           <div className="pointer-events-none absolute -bottom-28 left-[25%] h-[300px] w-[300px] rounded-full bg-sky-400/15 blur-[90px]" />
         </>
       )}
@@ -419,7 +385,7 @@ function Hero({ variant }: { variant: HomepageVariant }) {
             : "lg:grid-cols-[0.92fr_1.08fr]"
         }`}
       >
-        <div className="relative z-10">
+        <div className="relative z-10 order-2 lg:order-1">
           <p
             className={`mb-6 text-xs font-extrabold uppercase tracking-[0.09em] ${
               modern ? "text-cyan-100" : "text-[var(--site-accent)]"
@@ -460,9 +426,8 @@ function Hero({ variant }: { variant: HomepageVariant }) {
           </div>
         </div>
 
-        <div className="relative min-w-0 py-4">
+        <div className="relative order-1 min-w-0 py-4 lg:order-2">
           <HeroLaptop />
-
           <p
             className={`mt-3 text-center text-[11px] ${
               modern ? "text-white/65" : "text-[var(--site-muted)]"
@@ -475,10 +440,6 @@ function Hero({ variant }: { variant: HomepageVariant }) {
     </section>
   );
 }
-
-/* ========================================
-   SERVICES DATA
-======================================== */
 
 const services = [
   {
@@ -522,10 +483,6 @@ const services = [
   },
 ];
 
-/* ========================================
-   EXPANDABLE SERVICES
-======================================== */
-
 function Services() {
   const [expandedServices, setExpandedServices] = useState<string[]>([]);
 
@@ -546,11 +503,9 @@ function Services() {
         <p className="mb-3 text-xs font-bold uppercase tracking-widest text-[var(--site-accent)]">
           What I can build for you
         </p>
-
         <h2 className="text-3xl font-black tracking-tight sm:text-4xl">
           Practical solutions for your next idea.
         </h2>
-
         <p className="mt-5 leading-[1.85] text-[var(--site-muted)]">
           You don&apos;t always need an entirely new website. Sometimes the most
           useful next step is a focused page, an educational resource, or a
@@ -573,7 +528,6 @@ function Services() {
                 <div className="atp-service-icon flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--site-soft)] text-[var(--site-accent)]">
                   <Icon className="h-6 w-6" />
                 </div>
-
                 <span className="text-sm font-black text-[var(--site-muted)]/50">
                   {service.number}
                 </span>
@@ -585,10 +539,6 @@ function Services() {
                 {service.subtitle}
               </p>
 
-              <p className="mt-5 text-sm leading-[1.85] text-[var(--site-muted)]">
-                {service.description}
-              </p>
-
               <div className="mt-7 border-t border-[var(--site-border)] pt-5">
                 <button
                   type="button"
@@ -598,7 +548,6 @@ function Services() {
                   className="flex w-full items-center justify-between gap-3 rounded-xl bg-[var(--site-soft)] px-4 py-3 text-left text-sm font-bold text-[var(--site-text)] transition-colors hover:text-[var(--site-accent)]"
                 >
                   <span>What&apos;s included</span>
-
                   <ChevronRight
                     className={`h-4 w-4 shrink-0 text-[var(--site-accent)] transition-transform duration-300 ${
                       expanded ? "rotate-90" : ""
@@ -607,6 +556,10 @@ function Services() {
                 </button>
 
                 <div id={detailsId} hidden={!expanded} className="pt-5">
+                  <p className="mb-5 text-sm leading-[1.85] text-[var(--site-muted)]">
+                    {service.description}
+                  </p>
+
                   <div className="space-y-3">
                     {service.items.map((item) => (
                       <div
@@ -618,16 +571,16 @@ function Services() {
                       </div>
                     ))}
                   </div>
+
+                  <a
+                    href="#contact"
+                    className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-[var(--site-accent)]"
+                  >
+                    Discuss this service
+                    <ArrowRight className="h-4 w-4" />
+                  </a>
                 </div>
               </div>
-
-              <a
-                href="#contact"
-                className="mt-auto inline-flex items-center gap-2 pt-8 text-sm font-bold text-[var(--site-accent)]"
-              >
-                Discuss this service
-                <ArrowRight className="h-4 w-4" />
-              </a>
             </article>
           );
         })}
@@ -635,10 +588,6 @@ function Services() {
     </section>
   );
 }
-
-/* ========================================
-   EXAMPLE PREVIEWS
-======================================== */
 
 function TestimonialScreen() {
   const quotes = [
@@ -653,7 +602,6 @@ function TestimonialScreen() {
         <p className="text-[8px] font-bold uppercase tracking-widest text-[#236BDF]">
           Customer stories
         </p>
-
         <h3 className="mt-1 text-sm font-black">What people are saying</h3>
       </div>
 
@@ -664,11 +612,9 @@ function TestimonialScreen() {
             className="rounded-lg border border-[#D7E7F4] bg-white p-2 shadow-sm"
           >
             <p className="text-[8px] text-amber-400">★★★★★</p>
-
             <p className="mt-2 min-h-[43px] text-[8px] font-semibold leading-relaxed">
               “{quote}”
             </p>
-
             <p className="mt-3 border-t border-slate-100 pt-2 text-[8px] font-bold">
               {name}
             </p>
@@ -684,13 +630,20 @@ function TestimonialScreen() {
 }
 
 function EmailCourseScreen() {
+  const lessons = [
+    ["01", "Welcome and first steps"],
+    ["02", "Understand the opportunity"],
+    ["03", "Build a practical plan"],
+    ["04", "Put it into action"],
+    ["05", "What comes next"],
+  ];
+
   return (
     <div className="bg-[#F4F9FD] p-4 text-[#10243E]">
       <div className="mb-4 flex items-center gap-2">
         <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#DCEFFA]">
           <Mail className="h-4 w-4 text-[#236BDF]" />
         </div>
-
         <div>
           <p className="text-[10px] font-black">Your 5-day email course</p>
           <p className="text-[8px] text-slate-500">
@@ -700,13 +653,7 @@ function EmailCourseScreen() {
       </div>
 
       <div className="space-y-2">
-        {[
-          ["01", "Welcome and first steps"],
-          ["02", "Understand the opportunity"],
-          ["03", "Build a practical plan"],
-          ["04", "Put it into action"],
-          ["05", "What comes next"],
-        ].map(([day, title], index) => (
+        {lessons.map(([day, title], index) => (
           <div
             key={day}
             className="flex items-center gap-3 rounded-lg border border-[#D7E7F4] bg-white p-2"
@@ -714,11 +661,9 @@ function EmailCourseScreen() {
             <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-[#DCEFFA] text-[8px] font-black text-[#1259BC]">
               {day}
             </span>
-
             <span className="min-w-0 flex-1 truncate text-[9px] font-semibold">
               {title}
             </span>
-
             {index === 0 ? (
               <CheckCircle2 className="h-3 w-3 text-emerald-500" />
             ) : (
@@ -751,7 +696,6 @@ function CalculatorScreen() {
           ].map(([label, width]) => (
             <div key={label}>
               <p className="mb-1.5 text-[8px] font-semibold">{label}</p>
-
               <div className="h-2 rounded-full bg-[#DCEFFA]">
                 <div
                   className="h-2 rounded-full bg-[#22B8CC]"
@@ -764,9 +708,7 @@ function CalculatorScreen() {
 
         <div className="flex flex-col justify-center rounded-lg bg-[#123B69] p-3 text-white">
           <p className="text-[8px] text-white/70">Illustrative estimate</p>
-
           <p className="mt-2 text-lg font-black">$2,400</p>
-
           <p className="mt-2 text-[7px] text-white/70">Example only</p>
         </div>
       </div>
@@ -827,10 +769,6 @@ const examples: {
   },
 ];
 
-/* ========================================
-   EXAMPLES
-======================================== */
-
 function Examples() {
   return (
     <section
@@ -844,11 +782,9 @@ function Examples() {
         <p className="mb-3 text-xs font-bold uppercase tracking-widest text-[var(--site-accent)]">
           Examples and demonstrations
         </p>
-
         <h2 className="text-3xl font-black tracking-tight sm:text-4xl">
           See what&apos;s possible.
         </h2>
-
         <p className="mt-5 leading-[1.85] text-[var(--site-muted)]">
           A few examples of the kinds of digital assets and interactive features
           that can be created. These are demonstrations, not claims of completed
@@ -874,13 +810,10 @@ function Examples() {
               <p className="mb-3 text-xs font-bold text-[var(--site-accent)]">
                 {example.type}
               </p>
-
               <div className="flex items-start justify-between gap-3">
                 <h3 className="text-lg font-extrabold">{example.title}</h3>
-
                 <ArrowUpRight className="h-5 w-5 shrink-0 text-[var(--site-accent)] transition-transform group-hover:translate-x-1" />
               </div>
-
               <p className="mt-3 text-sm leading-[1.8] text-[var(--site-muted)]">
                 {example.description}
               </p>
@@ -892,34 +825,63 @@ function Examples() {
   );
 }
 
-/* ========================================
-   PROCESS
-======================================== */
-
 function Process() {
   const steps = [
-    { number: "01", title: "Start with an idea", description: "We discuss what you want to accomplish, who it's for, and what would make it useful.", icon: Sparkles },
-    { number: "02", title: "Plan the right asset", description: "We decide on the page, email course, or interactive feature that best fits the goal.", icon: Layers3 },
-    { number: "03", title: "Build and deliver", description: "I create the asset, refine the details, and help prepare it for use.", icon: CheckCircle2 },
+    {
+      number: "01",
+      title: "Start with an idea",
+      description:
+        "We discuss what you want to accomplish, who it's for, and what would make it useful.",
+      icon: Sparkles,
+    },
+    {
+      number: "02",
+      title: "Plan the right asset",
+      description:
+        "We decide on the page, email course, or interactive feature that best fits the goal.",
+      icon: Layers3,
+    },
+    {
+      number: "03",
+      title: "Build and deliver",
+      description:
+        "I create the asset, refine the details, and help prepare it for use.",
+      icon: CheckCircle2,
+    },
   ];
 
   return (
-    <section id="process-section" className="atp-process-section px-5 py-20 sm:px-8 lg:px-10 lg:py-28">
-      <div id="process" className="atp-anchor atp-section-heading max-w-[750px]">
-        <p className="mb-3 text-xs font-bold uppercase tracking-widest text-[var(--site-accent)]">A straightforward process</p>
-        <h2 className="text-3xl font-black tracking-tight sm:text-4xl">From conversation to something useful.</h2>
+    <section
+      id="process-section"
+      className="atp-process-section px-5 py-20 sm:px-8 lg:px-10 lg:py-28"
+    >
+      <div
+        id="process"
+        className="atp-anchor atp-section-heading max-w-[750px]"
+      >
+        <p className="mb-3 text-xs font-bold uppercase tracking-widest text-[var(--site-accent)]">
+          A straightforward process
+        </p>
+        <h2 className="text-3xl font-black tracking-tight sm:text-4xl">
+          From conversation to something useful.
+        </h2>
       </div>
+
       <div className="atp-process-grid grid gap-7 md:grid-cols-3">
         {steps.map((step) => {
           const Icon = step.icon;
           return (
             <article key={step.number} className="atp-process-card">
               <div className="atp-process-topline">
-                <div className="atp-process-icon"><Icon className="h-6 w-6" /></div>
+                <div className="atp-process-icon">
+                  <Icon className="h-6 w-6" />
+                </div>
                 <span className="atp-process-number">{step.number}</span>
               </div>
               <h3 className="mt-7 text-lg font-extrabold">{step.title}</h3>
-              <p className="mt-4 text-sm leading-[1.85] text-[var(--site-muted)]">{step.description}</p>
+              <p className="mt-4 text-sm leading-[1.85] text-[var(--site-muted)]">
+                {step.description}
+              </p>
             </article>
           );
         })}
@@ -928,40 +890,84 @@ function Process() {
   );
 }
 
-/* ========================================
-   ABOUT
-======================================== */
-
 function About() {
   return (
-    <section id="about-section" className="atp-about-section px-5 py-20 sm:px-8 lg:px-10">
+    <section
+      id="about-section"
+      className="atp-about-section px-5 py-20 sm:px-8 lg:px-10"
+    >
       <div className="atp-about-grid grid items-center gap-12 md:grid-cols-[1fr_0.85fr]">
         <div id="about" className="atp-anchor relative z-10">
-          <p className="mb-3 text-xs font-bold uppercase tracking-widest text-[var(--site-accent)]">About Alternative Tech Path</p>
-          <h2 className="text-3xl font-black tracking-tight">A practical approach to building.</h2>
-          <p className="mt-6 leading-[1.85] text-[var(--site-muted)]">I&apos;m an IT Technician and Software Developer with experience building web applications and solving practical technology problems.</p>
-          <p className="mt-5 leading-[1.85] text-[var(--site-muted)]">Through Alternative Tech Path, I bring that technical background to focused projects: landing pages, educational email courses, and useful additions to existing websites.</p>
+          <p className="mb-3 text-xs font-bold uppercase tracking-widest text-[var(--site-accent)]">
+            About Alternative Tech Path
+          </p>
+          <h2 className="text-3xl font-black tracking-tight">
+            A practical approach to building.
+          </h2>
+          <p className="mt-6 leading-[1.85] text-[var(--site-muted)]">
+            I&apos;m an IT Technician and Software Developer with experience
+            building web applications and solving practical technology problems.
+          </p>
+          <p className="mt-5 leading-[1.85] text-[var(--site-muted)]">
+            Through Alternative Tech Path, I bring that technical background to
+            focused projects: landing pages, educational email courses, and
+            useful additions to existing websites.
+          </p>
         </div>
-        <div className="atp-about-visual" aria-label="Illustration of connected design, development and integrations">
-          <div className="atp-about-orbit atp-about-orbit--one" aria-hidden="true" />
-          <div className="atp-about-orbit atp-about-orbit--two" aria-hidden="true" />
+
+        <div
+          className="atp-about-visual"
+          aria-label="Illustration of connected design, development and integrations"
+        >
+          <div
+            className="atp-about-orbit atp-about-orbit--one"
+            aria-hidden="true"
+          />
+          <div
+            className="atp-about-orbit atp-about-orbit--two"
+            aria-hidden="true"
+          />
           <div className="atp-about-main-card">
-            <div className="atp-about-card-head"><div className="atp-about-icon"><Code2 className="h-6 w-6" /></div><span className="atp-about-dots" aria-hidden="true">● ● ●</span></div>
-            <h3 className="mt-6 text-xl font-extrabold">More than just a page.</h3>
-            <p className="mt-4 text-sm leading-[1.85] text-[var(--site-muted)]">Design, development, integrations, and technical details working together to make something genuinely useful.</p>
-            <div className="atp-about-tags"><span>Web development</span><span>Integrations</span><span>Problem solving</span></div>
+            <div className="atp-about-card-head">
+              <div className="atp-about-icon">
+                <Code2 className="h-6 w-6" />
+              </div>
+              <span className="atp-about-dots" aria-hidden="true">
+                ● ● ●
+              </span>
+            </div>
+            <h3 className="mt-6 text-xl font-extrabold">
+              More than just a page.
+            </h3>
+            <p className="mt-4 text-sm leading-[1.85] text-[var(--site-muted)]">
+              Design, development, integrations, and technical details working
+              together to make something genuinely useful.
+            </p>
+            <div className="atp-about-tags">
+              <span>Web development</span>
+              <span>Integrations</span>
+              <span>Problem solving</span>
+            </div>
           </div>
-          <div className="atp-about-mini atp-about-mini--top" aria-hidden="true"><Sparkles size={16} /><span>Ideas into products</span></div>
-          <div className="atp-about-mini atp-about-mini--bottom" aria-hidden="true"><CheckCircle2 size={17} /><span>Built to be useful</span></div>
+          <div
+            className="atp-about-mini atp-about-mini--top"
+            aria-hidden="true"
+          >
+            <Sparkles size={16} />
+            <span>Ideas into products</span>
+          </div>
+          <div
+            className="atp-about-mini atp-about-mini--bottom"
+            aria-hidden="true"
+          >
+            <CheckCircle2 size={17} />
+            <span>Built to be useful</span>
+          </div>
         </div>
       </div>
     </section>
   );
 }
-
-/* ========================================
-   FREE COURSE
-======================================== */
 
 function Learn() {
   return (
@@ -971,17 +977,14 @@ function Learn() {
           <p className="mb-4 text-xs font-bold uppercase tracking-widest text-[var(--site-accent)]">
             A free resource
           </p>
-
           <h2 className="text-3xl font-black tracking-tight sm:text-4xl">
             From Skills to Software
           </h2>
-
           <p className="mt-6 max-w-[600px] leading-[1.85] text-[var(--site-muted)]">
             Interested in building software yourself? This free five-day email
             course walks through the decisions involved in turning programming
             knowledge into a real application.
           </p>
-
           <Link href={courseUrl} className="atp-primary mt-8">
             Explore the free course
             <ArrowRight className="h-4 w-4" />
@@ -990,7 +993,6 @@ function Learn() {
 
         <div className="atp-course-art relative mx-auto flex w-full max-w-[350px] items-center justify-center">
           <div className="absolute h-[230px] w-[230px] rounded-full bg-cyan-300/20 blur-[45px]" />
-
           <div className="atp-course-ring" aria-hidden="true" />
           <div className="relative h-[350px] w-full">
             <Image
@@ -1001,16 +1003,15 @@ function Learn() {
               className="object-contain"
             />
           </div>
-          <div className="atp-course-chip" aria-hidden="true"><BookOpen size={16} /> Free 5-day course</div>
+          <div className="atp-course-chip" aria-hidden="true">
+            <BookOpen size={16} />
+            Free 5-day course
+          </div>
         </div>
       </div>
     </section>
   );
 }
-
-/* ========================================
-   CONTACT
-======================================== */
 
 function Contact() {
   return (
@@ -1024,11 +1025,9 @@ function Contact() {
             <p className="mb-4 text-xs font-bold uppercase tracking-widest text-white/75">
               Let&apos;s explore your idea
             </p>
-
             <h2 className="text-2xl font-black sm:text-3xl">
               Have something in mind? Let&apos;s talk about it.
             </h2>
-
             <p className="mt-5 leading-[1.85] text-white/85">
               Whether it&apos;s a landing page, an educational email course, or
               a feature for your website, we can start with a simple
@@ -1049,15 +1048,10 @@ function Contact() {
   );
 }
 
-/* ========================================
-   FOOTER
-======================================== */
-
 function Footer() {
   return (
     <footer className="atp-footer flex flex-col gap-6 border-t border-[var(--site-border)] bg-[var(--site-surface)] px-5 py-9 sm:px-8 md:flex-row md:items-center md:justify-between lg:px-10">
       <Brand />
-
       <nav
         aria-label="Footer navigation"
         className="flex flex-wrap gap-5 text-sm font-semibold"
@@ -1071,20 +1065,14 @@ function Footer() {
             {item.label}
           </a>
         ))}
-
         <Link href={courseUrl} className="hover:text-[var(--site-accent)]">
           Free course
         </Link>
       </nav>
-
       <p className="text-xs text-[var(--site-muted)]">Alternative Tech Path</p>
     </footer>
   );
 }
-
-/* ========================================
-   HOMEPAGE
-======================================== */
 
 export default function ShowcaseHomepage({
   variant,
