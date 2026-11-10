@@ -44,8 +44,8 @@ function Brand() {
       aria-label="Alternative Tech Path home"
     >
       <div className="relative h-8 w-9 shrink-0" aria-hidden="true">
-        <span className="absolute bottom-0 left-0 h-[90%] w-[70%] bg-violet-700 [clip-path:polygon(50%_0,100%_100%,0_100%)]" />
-        <span className="absolute bottom-0 left-[40%] h-[70%] w-[60%] bg-sky-500 [clip-path:polygon(50%_0,100%_100%,0_100%)]" />
+        <span className="absolute bottom-0 left-0 h-[90%] w-[70%] bg-[#1768E8] [clip-path:polygon(50%_0,100%_100%,0_100%)]" />
+        <span className="absolute bottom-0 left-[40%] h-[70%] w-[60%] bg-[#3DE0D0] [clip-path:polygon(50%_0,100%_100%,0_100%)]" />
       </div>
 
       <span className="text-[12px] font-black leading-[1.15] tracking-[0.035em] sm:text-[14px]">
@@ -252,11 +252,11 @@ function BrowserWindow({
 function LandingScreen({ hero = false }: { hero?: boolean }) {
   return (
     <div
-      className={`bg-[#fcfbff] text-[#211b47] ${hero ? "p-4 sm:p-6" : "p-3"}`}
+      className={`bg-[#F7FBFF] text-[#10243E] ${hero ? "p-4 sm:p-6" : "p-3"}`}
     >
       <div className="mb-5 flex items-center justify-between">
         <div className="flex items-center gap-1.5">
-          <div className="flex h-5 w-5 items-center justify-center rounded-md bg-violet-600 text-white">
+          <div className="flex h-5 w-5 items-center justify-center rounded-md bg-[#236BDF] text-white">
             <Sparkles className="h-3 w-3" />
           </div>
 
@@ -268,7 +268,7 @@ function LandingScreen({ hero = false }: { hero?: boolean }) {
         <div className="flex items-center gap-3 text-[7px] font-semibold text-slate-500">
           <span>About</span>
           <span>Resources</span>
-          <span className="rounded bg-violet-600 px-2 py-1 text-white">
+          <span className="rounded bg-[#236BDF] px-2 py-1 text-white">
             Join free
           </span>
         </div>
@@ -276,7 +276,7 @@ function LandingScreen({ hero = false }: { hero?: boolean }) {
 
       <div className="grid grid-cols-[1.15fr_0.85fr] items-center gap-3">
         <div>
-          <div className="mb-2 inline-flex items-center gap-1 rounded-full bg-violet-100 px-2 py-1 text-[7px] font-bold text-violet-700">
+          <div className="mb-2 inline-flex items-center gap-1 rounded-full bg-[#DCEFFA] px-2 py-1 text-[7px] font-bold text-[#1259BC]">
             <Mail className="h-2.5 w-2.5" />
             FREE 5-DAY EMAIL SERIES
           </div>
@@ -287,7 +287,7 @@ function LandingScreen({ hero = false }: { hero?: boolean }) {
             }`}
           >
             Share your knowledge.
-            <span className="block text-violet-700">Grow your audience.</span>
+            <span className="block text-[#1259BC]">Grow your audience.</span>
           </h3>
 
           <p
@@ -303,7 +303,7 @@ function LandingScreen({ hero = false }: { hero?: boolean }) {
               Your email address
             </div>
 
-            <div className="flex h-7 items-center justify-center rounded-md bg-violet-600 px-3 text-[8px] font-bold text-white">
+            <div className="flex h-7 items-center justify-center rounded-md bg-[#236BDF] px-3 text-[8px] font-bold text-white">
               Get started
             </div>
           </div>
@@ -315,26 +315,26 @@ function LandingScreen({ hero = false }: { hero?: boolean }) {
         </div>
 
         <div className="relative flex min-h-[125px] items-center justify-center sm:min-h-[160px]">
-          <div className="absolute h-28 w-28 rounded-full bg-violet-200/70 blur-2xl" />
+          <div className="absolute h-28 w-28 rounded-full bg-[#87E8F2]/50 blur-2xl" />
 
-          <div className="relative w-[76%] max-w-[145px] -rotate-6 rounded-xl border border-violet-100 bg-white p-3 shadow-xl">
-            <div className="mb-3 flex h-8 w-8 items-center justify-center rounded-lg bg-violet-100">
-              <BookOpen className="h-4 w-4 text-violet-600" />
+          <div className="relative w-[76%] max-w-[145px] -rotate-6 rounded-xl border border-[#D7E7F4] bg-white p-3 shadow-xl">
+            <div className="mb-3 flex h-8 w-8 items-center justify-center rounded-lg bg-[#DCEFFA]">
+              <BookOpen className="h-4 w-4 text-[#236BDF]" />
             </div>
 
-            <p className="text-[8px] font-black text-violet-800">
+            <p className="text-[8px] font-black text-[#123B69]">
               5 DAYS TO
               <br />
               BETTER IDEAS
             </p>
 
             <div className="mt-3 space-y-1.5">
-              <div className="h-1.5 w-full rounded bg-violet-100" />
-              <div className="h-1.5 w-4/5 rounded bg-violet-100" />
+              <div className="h-1.5 w-full rounded bg-[#DCEFFA]" />
+              <div className="h-1.5 w-4/5 rounded bg-[#DCEFFA]" />
               <div className="h-1.5 w-3/5 rounded bg-sky-100" />
             </div>
 
-            <div className="mt-3 h-1.5 w-12 rounded bg-violet-600" />
+            <div className="mt-3 h-1.5 w-12 rounded bg-[#236BDF]" />
           </div>
         </div>
       </div>
@@ -374,24 +374,14 @@ function HeroLaptop() {
       </div>
 
       <div className="atp-hero-float atp-hero-float--left" aria-hidden="true">
-        <span className="atp-float-icon">
-          <Mail size={16} />
-        </span>
-        <span>
-          <strong>5-day course</strong>
-          <small>Ready to launch</small>
-        </span>
+        <span className="atp-float-icon"><Mail size={16} /></span>
+        <span><strong>5-day course</strong><small>Ready to launch</small></span>
       </div>
       <div className="atp-hero-float atp-hero-float--right" aria-hidden="true">
-        <span className="atp-float-icon atp-float-icon--green">
-          <Check size={16} />
-        </span>
-        <span>
-          <strong>Signup connected</strong>
-          <small>Audience-ready</small>
-        </span>
+        <span className="atp-float-icon atp-float-icon--green"><Check size={16} /></span>
+        <span><strong>Signup connected</strong><small>Audience-ready</small></span>
       </div>
-      <div className="pointer-events-none absolute -right-1 top-[10%] hidden items-center gap-2 rounded-xl border border-white/30 bg-white px-3 py-2 text-[#351878] shadow-xl sm:flex atp-original-hero-badge">
+      <div className="pointer-events-none absolute -right-1 top-[10%] hidden items-center gap-2 rounded-xl border border-white/30 bg-white px-3 py-2 text-[#123B69] shadow-xl sm:flex atp-original-hero-badge">
         <CheckCircle2 className="h-4 w-4 text-emerald-500" />
         <span className="text-[10px] font-bold">Ready to engage</span>
       </div>
@@ -410,13 +400,13 @@ function Hero({ variant }: { variant: HomepageVariant }) {
     <section
       className={`relative overflow-hidden ${
         modern
-          ? "bg-gradient-to-br from-[#171345] via-[#381785] to-[#6324c5] text-white"
+          ? "bg-gradient-to-br from-[#071324] via-[#12365D] to-[#155D83] text-white"
           : "bg-[var(--site-surface)]"
       }`}
     >
       {modern && (
         <>
-          <div className="pointer-events-none absolute -right-20 -top-24 h-[350px] w-[350px] rounded-full bg-violet-400/20 blur-[100px]" />
+          <div className="pointer-events-none absolute -right-20 -top-24 h-[350px] w-[350px] rounded-full bg-cyan-400/20 blur-[100px]" />
 
           <div className="pointer-events-none absolute -bottom-28 left-[25%] h-[300px] w-[300px] rounded-full bg-sky-400/15 blur-[90px]" />
         </>
@@ -432,7 +422,7 @@ function Hero({ variant }: { variant: HomepageVariant }) {
         <div className="relative z-10">
           <p
             className={`mb-6 text-xs font-extrabold uppercase tracking-[0.09em] ${
-              modern ? "text-violet-200" : "text-[var(--site-accent)]"
+              modern ? "text-cyan-100" : "text-[var(--site-accent)]"
             }`}
           >
             Landing pages · Email courses · Website add-ons
@@ -658,9 +648,9 @@ function TestimonialScreen() {
   ];
 
   return (
-    <div className="bg-[#faf8ff] p-4 text-[#211b47]">
+    <div className="bg-[#F4F9FD] p-4 text-[#10243E]">
       <div className="mb-4 text-center">
-        <p className="text-[8px] font-bold uppercase tracking-widest text-violet-600">
+        <p className="text-[8px] font-bold uppercase tracking-widest text-[#236BDF]">
           Customer stories
         </p>
 
@@ -671,7 +661,7 @@ function TestimonialScreen() {
         {quotes.map(([name, quote]) => (
           <div
             key={name}
-            className="rounded-lg border border-violet-100 bg-white p-2 shadow-sm"
+            className="rounded-lg border border-[#D7E7F4] bg-white p-2 shadow-sm"
           >
             <p className="text-[8px] text-amber-400">★★★★★</p>
 
@@ -695,10 +685,10 @@ function TestimonialScreen() {
 
 function EmailCourseScreen() {
   return (
-    <div className="bg-[#faf8ff] p-4 text-[#211b47]">
+    <div className="bg-[#F4F9FD] p-4 text-[#10243E]">
       <div className="mb-4 flex items-center gap-2">
-        <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-violet-100">
-          <Mail className="h-4 w-4 text-violet-600" />
+        <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#DCEFFA]">
+          <Mail className="h-4 w-4 text-[#236BDF]" />
         </div>
 
         <div>
@@ -719,9 +709,9 @@ function EmailCourseScreen() {
         ].map(([day, title], index) => (
           <div
             key={day}
-            className="flex items-center gap-3 rounded-lg border border-violet-100 bg-white p-2"
+            className="flex items-center gap-3 rounded-lg border border-[#D7E7F4] bg-white p-2"
           >
-            <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-violet-100 text-[8px] font-black text-violet-700">
+            <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-[#DCEFFA] text-[8px] font-black text-[#1259BC]">
               {day}
             </span>
 
@@ -743,9 +733,9 @@ function EmailCourseScreen() {
 
 function CalculatorScreen() {
   return (
-    <div className="bg-[#faf8ff] p-4 text-[#211b47]">
+    <div className="bg-[#F4F9FD] p-4 text-[#10243E]">
       <div className="mb-4 flex items-center gap-2">
-        <Calculator className="h-5 w-5 text-violet-600" />
+        <Calculator className="h-5 w-5 text-[#236BDF]" />
         <div>
           <p className="text-xs font-black">Interactive estimator</p>
           <p className="text-[8px] text-slate-500">Example website add-on</p>
@@ -753,7 +743,7 @@ function CalculatorScreen() {
       </div>
 
       <div className="grid grid-cols-[1.15fr_0.85fr] gap-3">
-        <div className="space-y-4 rounded-lg border border-violet-100 bg-white p-3">
+        <div className="space-y-4 rounded-lg border border-[#D7E7F4] bg-white p-3">
           {[
             ["Project size", "65%"],
             ["Complexity", "40%"],
@@ -762,9 +752,9 @@ function CalculatorScreen() {
             <div key={label}>
               <p className="mb-1.5 text-[8px] font-semibold">{label}</p>
 
-              <div className="h-2 rounded-full bg-violet-100">
+              <div className="h-2 rounded-full bg-[#DCEFFA]">
                 <div
-                  className="h-2 rounded-full bg-violet-500"
+                  className="h-2 rounded-full bg-[#22B8CC]"
                   style={{ width }}
                 />
               </div>
@@ -772,7 +762,7 @@ function CalculatorScreen() {
           ))}
         </div>
 
-        <div className="flex flex-col justify-center rounded-lg bg-violet-800 p-3 text-white">
+        <div className="flex flex-col justify-center rounded-lg bg-[#123B69] p-3 text-white">
           <p className="text-[8px] text-white/70">Illustrative estimate</p>
 
           <p className="mt-2 text-lg font-black">$2,400</p>
@@ -908,44 +898,16 @@ function Examples() {
 
 function Process() {
   const steps = [
-    {
-      number: "01",
-      title: "Start with an idea",
-      description:
-        "We discuss what you want to accomplish, who it's for, and what would make it useful.",
-      icon: Sparkles,
-    },
-    {
-      number: "02",
-      title: "Plan the right asset",
-      description:
-        "We decide on the page, email course, or interactive feature that best fits the goal.",
-      icon: Layers3,
-    },
-    {
-      number: "03",
-      title: "Build and deliver",
-      description:
-        "I create the asset, refine the details, and help prepare it for use.",
-      icon: CheckCircle2,
-    },
+    { number: "01", title: "Start with an idea", description: "We discuss what you want to accomplish, who it's for, and what would make it useful.", icon: Sparkles },
+    { number: "02", title: "Plan the right asset", description: "We decide on the page, email course, or interactive feature that best fits the goal.", icon: Layers3 },
+    { number: "03", title: "Build and deliver", description: "I create the asset, refine the details, and help prepare it for use.", icon: CheckCircle2 },
   ];
 
   return (
-    <section
-      id="process-section"
-      className="atp-process-section px-5 py-20 sm:px-8 lg:px-10 lg:py-28"
-    >
-      <div
-        id="process"
-        className="atp-anchor atp-section-heading max-w-[750px]"
-      >
-        <p className="mb-3 text-xs font-bold uppercase tracking-widest text-[var(--site-accent)]">
-          A straightforward process
-        </p>
-        <h2 className="text-3xl font-black tracking-tight sm:text-4xl">
-          From conversation to something useful.
-        </h2>
+    <section id="process-section" className="atp-process-section px-5 py-20 sm:px-8 lg:px-10 lg:py-28">
+      <div id="process" className="atp-anchor atp-section-heading max-w-[750px]">
+        <p className="mb-3 text-xs font-bold uppercase tracking-widest text-[var(--site-accent)]">A straightforward process</p>
+        <h2 className="text-3xl font-black tracking-tight sm:text-4xl">From conversation to something useful.</h2>
       </div>
       <div className="atp-process-grid grid gap-7 md:grid-cols-3">
         {steps.map((step) => {
@@ -953,15 +915,11 @@ function Process() {
           return (
             <article key={step.number} className="atp-process-card">
               <div className="atp-process-topline">
-                <div className="atp-process-icon">
-                  <Icon className="h-6 w-6" />
-                </div>
+                <div className="atp-process-icon"><Icon className="h-6 w-6" /></div>
                 <span className="atp-process-number">{step.number}</span>
               </div>
               <h3 className="mt-7 text-lg font-extrabold">{step.title}</h3>
-              <p className="mt-4 text-sm leading-[1.85] text-[var(--site-muted)]">
-                {step.description}
-              </p>
+              <p className="mt-4 text-sm leading-[1.85] text-[var(--site-muted)]">{step.description}</p>
             </article>
           );
         })}
@@ -976,76 +934,25 @@ function Process() {
 
 function About() {
   return (
-    <section
-      id="about-section"
-      className="atp-about-section px-5 py-20 sm:px-8 lg:px-10"
-    >
+    <section id="about-section" className="atp-about-section px-5 py-20 sm:px-8 lg:px-10">
       <div className="atp-about-grid grid items-center gap-12 md:grid-cols-[1fr_0.85fr]">
         <div id="about" className="atp-anchor relative z-10">
-          <p className="mb-3 text-xs font-bold uppercase tracking-widest text-[var(--site-accent)]">
-            About Alternative Tech Path
-          </p>
-          <h2 className="text-3xl font-black tracking-tight">
-            A practical approach to building.
-          </h2>
-          <p className="mt-6 leading-[1.85] text-[var(--site-muted)]">
-            I&apos;m an IT Technician and Software Developer with experience
-            building web applications and solving practical technology problems.
-          </p>
-          <p className="mt-5 leading-[1.85] text-[var(--site-muted)]">
-            Through Alternative Tech Path, I bring that technical background to
-            focused projects: landing pages, educational email courses, and
-            useful additions to existing websites.
-          </p>
+          <p className="mb-3 text-xs font-bold uppercase tracking-widest text-[var(--site-accent)]">About Alternative Tech Path</p>
+          <h2 className="text-3xl font-black tracking-tight">A practical approach to building.</h2>
+          <p className="mt-6 leading-[1.85] text-[var(--site-muted)]">I&apos;m an IT Technician and Software Developer with experience building web applications and solving practical technology problems.</p>
+          <p className="mt-5 leading-[1.85] text-[var(--site-muted)]">Through Alternative Tech Path, I bring that technical background to focused projects: landing pages, educational email courses, and useful additions to existing websites.</p>
         </div>
-        <div
-          className="atp-about-visual"
-          aria-label="Illustration of connected design, development and integrations"
-        >
-          <div
-            className="atp-about-orbit atp-about-orbit--one"
-            aria-hidden="true"
-          />
-          <div
-            className="atp-about-orbit atp-about-orbit--two"
-            aria-hidden="true"
-          />
+        <div className="atp-about-visual" aria-label="Illustration of connected design, development and integrations">
+          <div className="atp-about-orbit atp-about-orbit--one" aria-hidden="true" />
+          <div className="atp-about-orbit atp-about-orbit--two" aria-hidden="true" />
           <div className="atp-about-main-card">
-            <div className="atp-about-card-head">
-              <div className="atp-about-icon">
-                <Code2 className="h-6 w-6" />
-              </div>
-              <span className="atp-about-dots" aria-hidden="true">
-                ● ● ●
-              </span>
-            </div>
-            <h3 className="mt-6 text-xl font-extrabold">
-              More than just a page.
-            </h3>
-            <p className="mt-4 text-sm leading-[1.85] text-[var(--site-muted)]">
-              Design, development, integrations, and technical details working
-              together to make something genuinely useful.
-            </p>
-            <div className="atp-about-tags">
-              <span>Web development</span>
-              <span>Integrations</span>
-              <span>Problem solving</span>
-            </div>
+            <div className="atp-about-card-head"><div className="atp-about-icon"><Code2 className="h-6 w-6" /></div><span className="atp-about-dots" aria-hidden="true">● ● ●</span></div>
+            <h3 className="mt-6 text-xl font-extrabold">More than just a page.</h3>
+            <p className="mt-4 text-sm leading-[1.85] text-[var(--site-muted)]">Design, development, integrations, and technical details working together to make something genuinely useful.</p>
+            <div className="atp-about-tags"><span>Web development</span><span>Integrations</span><span>Problem solving</span></div>
           </div>
-          <div
-            className="atp-about-mini atp-about-mini--top"
-            aria-hidden="true"
-          >
-            <Sparkles size={16} />
-            <span>Ideas into products</span>
-          </div>
-          <div
-            className="atp-about-mini atp-about-mini--bottom"
-            aria-hidden="true"
-          >
-            <CheckCircle2 size={17} />
-            <span>Built to be useful</span>
-          </div>
+          <div className="atp-about-mini atp-about-mini--top" aria-hidden="true"><Sparkles size={16} /><span>Ideas into products</span></div>
+          <div className="atp-about-mini atp-about-mini--bottom" aria-hidden="true"><CheckCircle2 size={17} /><span>Built to be useful</span></div>
         </div>
       </div>
     </section>
@@ -1082,7 +989,7 @@ function Learn() {
         </div>
 
         <div className="atp-course-art relative mx-auto flex w-full max-w-[350px] items-center justify-center">
-          <div className="absolute h-[230px] w-[230px] rounded-full bg-violet-300/20 blur-[45px]" />
+          <div className="absolute h-[230px] w-[230px] rounded-full bg-cyan-300/20 blur-[45px]" />
 
           <div className="atp-course-ring" aria-hidden="true" />
           <div className="relative h-[350px] w-full">
@@ -1094,9 +1001,7 @@ function Learn() {
               className="object-contain"
             />
           </div>
-          <div className="atp-course-chip" aria-hidden="true">
-            <BookOpen size={16} /> Free 5-day course
-          </div>
+          <div className="atp-course-chip" aria-hidden="true"><BookOpen size={16} /> Free 5-day course</div>
         </div>
       </div>
     </section>
@@ -1113,7 +1018,7 @@ function Contact() {
       id="contact-section"
       className="px-5 pb-16 pt-12 sm:px-8 lg:px-10 lg:pb-20"
     >
-      <div className="atp-contact-panel rounded-[22px] bg-gradient-to-r from-[#5720c7] to-[#347de8] px-6 py-14 text-white sm:px-10">
+      <div className="atp-contact-panel rounded-[22px] bg-gradient-to-r from-[#103D71] via-[#1768B3] to-[#0A9BB1] px-6 py-14 text-white sm:px-10">
         <div className="flex flex-col justify-between gap-9 md:flex-row md:items-center">
           <div id="contact" className="atp-anchor max-w-[700px]">
             <p className="mb-4 text-xs font-bold uppercase tracking-widest text-white/75">
@@ -1133,7 +1038,7 @@ function Contact() {
 
           <a
             href="mailto:hello@alternativetechpath.com?subject=Project%20idea"
-            className="inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-white px-5 py-3 font-bold text-[#32117d] transition-colors hover:bg-violet-50"
+            className="inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-white px-5 py-3 font-bold text-[#103D71] transition-colors hover:bg-violet-50"
           >
             <Mail className="h-4 w-4" />
             Discuss an idea

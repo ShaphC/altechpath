@@ -4,21 +4,15 @@
 
 :root {
   --background: #ffffff;
-
-  --foreground: #0b1438;
-
-  --accent: #6025dc;
-
-  --accent-dark: #5016c9;
-
-  --accent-soft: #f0e7ff;
-
-  --body-text: #263254;
+  --foreground: #10243e;
+  --accent: #236bdf;
+  --accent-dark: #1557c0;
+  --accent-soft: #e0f3fc;
+  --body-text: #334c66;
 }
 
 @theme inline {
   --color-background: var(--background);
-
   --color-foreground: var(--foreground);
 }
 
@@ -32,13 +26,9 @@ html {
 
 body {
   margin: 0;
-
   background: var(--background);
-
   color: var(--foreground);
-
   font-family: "Inter", Arial, Helvetica, sans-serif;
-
   -webkit-font-smoothing: antialiased;
 }
 
@@ -49,9 +39,8 @@ textarea {
 }
 
 ::selection {
-  background: #e6d7ff;
-
-  color: #32106d;
+  background: #bfeffa;
+  color: #103d71;
 }
 
 /* ========================================
@@ -61,40 +50,23 @@ textarea {
 ======================================== */
 
 .atp-site {
-  --site-bg: #e9edf5;
-
+  --site-bg: #e6eff6;
   --site-surface: #ffffff;
-
-  --site-text: #0b1438;
-
-  --site-muted: #53617d;
-
-  --site-border: #cfd6e3;
-
-  --site-soft: #f4efff;
-
-  --site-accent: #6025dc;
-
-  --site-accent-hover: #5016c9;
-
-  --site-hero: #f8f5ff;
-
+  --site-text: #10243e;
+  --site-muted: #526b83;
+  --site-border: #c9dceb;
+  --site-soft: #eaf6fc;
+  --site-accent: #236bdf;
+  --site-accent-hover: #1557c0;
+  --site-hero: #f1f8fd;
   --preview-surface: #ffffff;
-
   --preview-subtle: #f7f5fc;
-
   --preview-text: #222047;
-
   --preview-muted: #77758e;
-
   --preview-border: #e9e4f3;
-
   min-height: 100vh;
-
   background: var(--site-bg);
-
   color: var(--site-text);
-
   transition:
     background-color 200ms ease,
     color 200ms ease;
@@ -107,33 +79,20 @@ textarea {
 ======================================== */
 
 .site-dark .atp-site {
-  --site-bg: #090e20;
-
-  --site-surface: #141c33;
-
-  --site-text: #f5f7ff;
-
-  --site-muted: #b2bfd9;
-
-  --site-border: #303a55;
-
-  --site-soft: #242045;
-
-  --site-accent: #9065f7;
-
-  --site-accent-hover: #a785ff;
-
-  --site-hero: #1b2140;
-
-  --preview-surface: #202943;
-
-  --preview-subtle: #182139;
-
-  --preview-text: #f5f3ff;
-
-  --preview-muted: #aeb6cd;
-
-  --preview-border: #39445e;
+  --site-bg: #071321;
+  --site-surface: #10243a;
+  --site-text: #f0faff;
+  --site-muted: #b4cdda;
+  --site-border: #2c5068;
+  --site-soft: #14334a;
+  --site-accent: #49d8f0;
+  --site-accent-hover: #78e8f5;
+  --site-hero: #132d45;
+  --preview-surface: #1b3c52;
+  --preview-subtle: #112d43;
+  --preview-text: #f0faff;
+  --preview-muted: #b3c8d7;
+  --preview-border: #31536a;
 }
 
 /* ========================================
@@ -144,17 +103,11 @@ textarea {
 
 .atp-page-frame {
   width: 100%;
-
   max-width: 1200px;
-
   min-height: 100vh;
-
   margin-inline: auto;
-
   background: var(--site-surface);
-
   border-left: 1px solid var(--site-border);
-
   border-right: 1px solid var(--site-border);
 }
 
@@ -168,24 +121,17 @@ textarea {
   .atp-site {
     padding: 24px;
   }
-
   .atp-page-frame {
     min-height: calc(100vh - 48px);
-
     border: 1px solid var(--site-border);
-
     border-radius: 20px;
   }
-
   .atp-page-frame > .atp-header:not(.atp-header--floating) {
     border-top-left-radius: 20px;
-
     border-top-right-radius: 20px;
   }
-
   .atp-page-frame > .atp-footer {
     border-bottom-left-radius: 20px;
-
     border-bottom-right-radius: 20px;
   }
 }
@@ -198,27 +144,16 @@ textarea {
 
 .atp-header {
   position: sticky;
-
   top: 0;
-
   z-index: 50;
-
   width: 100%;
-
   margin-inline: auto;
-
   border: 1px solid transparent;
-
   border-bottom-color: var(--site-border);
-
   border-radius: 0;
-
   background: var(--site-surface);
-
   color: var(--site-text);
-
   box-shadow: none;
-
   transition:
     top 300ms ease,
     width 300ms ease,
@@ -230,7 +165,6 @@ textarea {
 
 .atp-header-inner {
   min-height: 78px;
-
   transition:
     min-height 300ms ease,
     padding 300ms ease;
@@ -238,13 +172,9 @@ textarea {
 
 .atp-header--floating {
   top: 14px;
-
   width: calc(100% - 32px);
-
   border: 1px solid var(--site-border);
-
   border-radius: 999px;
-
   box-shadow:
     0 14px 38px rgba(12, 8, 45, 0.16),
     0 3px 10px rgba(12, 8, 45, 0.06);
@@ -269,13 +199,10 @@ textarea {
 @media (max-width: 767px) {
   .atp-header--floating {
     top: 10px;
-
     width: calc(100% - 20px);
   }
-
   .atp-header--floating .atp-header-inner {
     min-height: 62px;
-
     padding-inline: 20px;
   }
 }
@@ -288,25 +215,15 @@ textarea {
 
 .atp-site .atp-primary {
   display: inline-flex;
-
   align-items: center;
-
   justify-content: center;
-
   gap: 10px;
-
   padding: 13px 20px;
-
   border-radius: 11px;
-
   background: var(--site-accent);
-
   color: #ffffff;
-
   font-weight: 700;
-
   text-decoration: none;
-
   transition:
     background-color 200ms ease,
     transform 200ms ease;
@@ -314,33 +231,21 @@ textarea {
 
 .atp-site .atp-primary:hover {
   background: var(--site-accent-hover);
-
   transform: translateY(-1px);
 }
 
 .atp-site .atp-secondary {
   display: inline-flex;
-
   align-items: center;
-
   justify-content: center;
-
   gap: 10px;
-
   padding: 12px 19px;
-
   border: 1px solid var(--site-border);
-
   border-radius: 11px;
-
   background: var(--site-surface);
-
   color: var(--site-text);
-
   font-weight: 700;
-
   text-decoration: none;
-
   transition: border-color 200ms ease;
 }
 
@@ -356,17 +261,11 @@ textarea {
 
 .atp-site .atp-card {
   display: block;
-
   min-width: 0;
-
   overflow: hidden;
-
   background: var(--site-surface);
-
   border: 1px solid var(--site-border);
-
   border-radius: 18px;
-
   transition:
     border-color 200ms ease,
     transform 200ms ease,
@@ -375,9 +274,7 @@ textarea {
 
 .atp-site .atp-card:hover {
   border-color: var(--site-accent);
-
   transform: translateY(-3px);
-
   box-shadow: 0 14px 35px rgba(38, 23, 83, 0.08);
 }
 
@@ -389,17 +286,11 @@ textarea {
 
 .atp-browser {
   min-width: 0;
-
   overflow: hidden;
-
   border: 1px solid var(--preview-border);
-
   border-radius: 14px;
-
   background: var(--preview-surface);
-
   color: var(--preview-text);
-
   box-shadow:
     0 18px 50px rgba(25, 15, 75, 0.12),
     0 2px 8px rgba(25, 15, 75, 0.05);
@@ -407,75 +298,47 @@ textarea {
 
 .atp-browser-bar {
   display: flex;
-
   align-items: center;
-
   gap: 8px;
-
   min-height: 34px;
-
   padding: 8px 12px;
-
   border-bottom: 1px solid var(--preview-border);
-
   background: var(--preview-surface);
 }
 
 .atp-browser-dot {
   width: 7px;
-
   height: 7px;
-
   flex-shrink: 0;
-
   border-radius: 50%;
 }
 
 .atp-browser-address {
   min-width: 0;
-
   max-width: 260px;
-
   margin-inline: auto;
-
   padding: 5px 12px;
-
   border: 1px solid var(--preview-border);
-
   border-radius: 6px;
-
   background: var(--preview-subtle);
-
   color: var(--preview-muted);
-
   font-size: 9px;
-
   text-align: center;
-
   overflow: hidden;
-
   text-overflow: ellipsis;
-
   white-space: nowrap;
 }
 
 .atp-preview-stage {
   display: flex;
-
   min-width: 0;
-
   align-items: center;
-
   justify-content: center;
-
   overflow: hidden;
-
   padding: 30px;
-
   background:
     radial-gradient(
       circle at 20% 20%,
-
       rgba(139, 92, 246, 0.15),
       transparent 45%
     ),
@@ -490,39 +353,28 @@ textarea {
 
 .atp-laptop-scene {
   position: relative;
-
   width: 100%;
-
   padding: 12px 12px 20px;
 }
 
 .atp-laptop-glow {
   position: absolute;
-
   inset: 12% 4%;
-
   border-radius: 50%;
-
   background: radial-gradient(
     ellipse,
     rgba(174, 119, 255, 0.36),
     rgba(122, 75, 235, 0.12) 55%,
-
     transparent 76%
   );
-
   filter: blur(34px);
-
   pointer-events: none;
 }
 
 .atp-laptop-perspective {
   position: relative;
-
   z-index: 1;
-
   transform: none;
-
   transition: transform 400ms ease;
 }
 
@@ -532,27 +384,18 @@ textarea {
 
 .atp-laptop {
   isolation: isolate;
-
   filter: drop-shadow(0 28px 35px rgba(12, 4, 43, 0.35));
 }
 
 .atp-laptop-lid {
   position: relative;
-
   width: 92%;
-
   margin-inline: auto;
-
   padding: 13px 12px 12px;
-
   overflow: hidden;
-
-  border: 1px solid #7d8092;
-
+  border: 1px solid #738fa3;
   border-radius: 15px 15px 5px 5px;
-
   background: linear-gradient(135deg, #333743, #10131e 55%, #343847);
-
   box-shadow:
     inset 0 1px 1px rgba(255, 255, 255, 0.3),
     0 2px 4px rgba(0, 0, 0, 0.25);
@@ -560,95 +403,61 @@ textarea {
 
 .atp-laptop-camera {
   position: absolute;
-
   top: 5px;
-
   left: 50%;
-
   width: 4px;
-
   height: 4px;
-
   transform: translateX(-50%);
-
   border-radius: 50%;
-
   background: #626b85;
-
   box-shadow: 0 0 0 1px #151923;
 }
 
 .atp-laptop-screen {
   overflow: hidden;
-
   aspect-ratio: 16 / 10;
-
   border-radius: 2px;
-
   background: #fcfbff;
 }
 
 .atp-laptop-screen > div {
   width: 100%;
-
   height: 100%;
-
   overflow: hidden;
 }
 
 .atp-laptop-base {
   position: relative;
-
   width: 100%;
-
   height: 15px;
-
   margin-top: -1px;
-
   border-radius: 3px 3px 9px 9px;
-
   background: linear-gradient(
     to bottom,
-
     #e2e4ed 0%,
-
     #b7bac9 38%,
-
     #7e8394 85%,
-
     #53586a 100%
   );
-
   box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.9);
 }
 
 .atp-laptop-notch {
   position: absolute;
-
   top: 0;
-
   left: 50%;
-
   width: 17%;
-
   height: 5px;
-
   transform: translateX(-50%);
-
   border-radius: 0 0 8px 8px;
-
   background: #9499a9;
 }
 
 .atp-laptop-bottom {
   width: 97%;
-
   height: 5px;
-
   margin-inline: auto;
-
   border-radius: 0 0 50% 50%;
-
   background: linear-gradient(to bottom, #777d8f, #373b49);
 }
 
@@ -663,7 +472,6 @@ textarea {
 .atp-site #about-section,
 .atp-site #learn-section {
   padding-top: 88px;
-
   padding-bottom: 88px;
 }
 
@@ -698,29 +506,23 @@ textarea {
 
 .atp-examples-grid > a {
   display: flex;
-
   flex-direction: column;
-
   height: 100%;
 }
 
 .atp-examples-grid .atp-preview-stage {
   height: 270px;
-
   min-height: 270px;
-
   padding: 28px;
 }
 
 .atp-examples-grid .atp-browser {
   width: 100%;
-
   max-width: 390px;
 }
 
 .atp-examples-grid .atp-example-description {
   flex: 1;
-
   padding: 26px;
 }
 
@@ -736,7 +538,6 @@ textarea {
   .atp-site #about-section,
   .atp-site #learn-section {
     padding-top: 72px;
-
     padding-bottom: 72px;
   }
 }
@@ -747,31 +548,23 @@ textarea {
   .atp-site #about-section,
   .atp-site #learn-section {
     padding-top: 60px;
-
     padding-bottom: 60px;
   }
-
   .atp-site #services-section .atp-card {
     padding: 24px;
   }
-
   .atp-site #services-section .atp-services-grid,
   .atp-site #examples-section .atp-examples-grid {
     gap: 20px;
   }
-
   .atp-examples-grid .atp-preview-stage {
     height: 220px;
-
     min-height: 220px;
-
     padding: 16px;
   }
-
   .atp-examples-grid .atp-example-description {
     padding: 22px;
   }
-
   .atp-laptop-scene {
     padding: 8px 4px 14px;
   }
@@ -787,7 +580,6 @@ textarea {
   from {
     transform: translateX(0);
   }
-
   to {
     transform: translateX(-50%);
   }
@@ -797,7 +589,6 @@ textarea {
   from {
     transform: translateX(-50%);
   }
-
   to {
     transform: translateX(0);
   }
@@ -825,17 +616,13 @@ textarea {
   html {
     scroll-behavior: auto;
   }
-
   .atp-site *,
   .atp-site *::before,
   .atp-site *::after {
     animation-duration: 0.01ms !important;
-
     transition-duration: 0.01ms !important;
-
     scroll-behavior: auto !important;
   }
-
   .testimonial-track {
     animation: none;
   }
@@ -851,17 +638,13 @@ textarea {
 
 .atp-site {
   --glass-border: rgba(255, 255, 255, 0.58);
-
   --glass-shadow: rgba(41, 23, 96, 0.13);
-
   --depth-highlight: rgba(255, 255, 255, 0.85);
 }
 
 .site-dark .atp-site {
   --glass-border: rgba(255, 255, 255, 0.13);
-
   --glass-shadow: rgba(0, 0, 0, 0.38);
-
   --depth-highlight: rgba(255, 255, 255, 0.08);
 }
 
@@ -869,13 +652,9 @@ textarea {
 
 .atp-header--floating {
   background: color-mix(in srgb, var(--site-surface) 76%, transparent);
-
   backdrop-filter: blur(22px) saturate(160%);
-
   -webkit-backdrop-filter: blur(22px) saturate(160%);
-
   border: 1px solid var(--glass-border);
-
   box-shadow:
     0 2px 0 var(--depth-highlight) inset,
     0 12px 25px rgba(25, 12, 75, 0.12),
@@ -890,28 +669,20 @@ textarea {
 
 .atp-services-grid .atp-card {
   position: relative;
-
   isolation: isolate;
-
   overflow: hidden;
-
   background: linear-gradient(
     145deg,
     color-mix(in srgb, var(--site-surface) 95%, white),
     var(--site-surface)
   );
-
   border: 1px solid var(--glass-border);
-
   box-shadow:
     0 1px 0 var(--depth-highlight) inset,
     0 6px 12px rgba(36, 20, 85, 0.04),
     0 18px 40px var(--glass-shadow);
-
   transform: translateY(-4px);
-
   transform-style: preserve-3d;
-
   transition:
     transform 450ms cubic-bezier(0.2, 0.8, 0.2, 1),
     box-shadow 450ms ease,
@@ -920,20 +691,14 @@ textarea {
 
 .atp-services-grid .atp-card::before {
   content: "";
-
   position: absolute;
-
   inset: 0;
-
   z-index: -1;
-
   pointer-events: none;
-
   background: linear-gradient(
     125deg,
     rgba(255, 255, 255, 0.22),
     transparent 42%,
-
     rgba(135, 92, 246, 0.045)
   );
 }
@@ -941,7 +706,6 @@ textarea {
 @media (hover: hover) {
   .atp-services-grid .atp-card:hover {
     transform: translateY(-14px) rotateX(2deg) rotateY(-2deg) scale(1.015);
-
     box-shadow:
       0 1px 0 var(--depth-highlight) inset,
       0 22px 35px rgba(60, 31, 130, 0.12),
@@ -955,7 +719,6 @@ textarea {
   box-shadow:
     0 8px 20px rgba(95, 55, 190, 0.14),
     0 1px 0 rgba(255, 255, 255, 0.65) inset;
-
   transition: transform 350ms ease;
 }
 
@@ -967,13 +730,10 @@ textarea {
 
 .atp-services-grid button[aria-expanded] {
   border: 1px solid color-mix(in srgb, var(--site-accent) 13%, transparent);
-
   background: color-mix(in srgb, var(--site-soft) 76%, transparent);
-
   box-shadow:
     0 1px 0 rgba(255, 255, 255, 0.45) inset,
     0 5px 12px rgba(55, 25, 125, 0.045);
-
   transition:
     transform 250ms ease,
     box-shadow 250ms ease,
@@ -982,7 +742,6 @@ textarea {
 
 .atp-services-grid button[aria-expanded]:hover {
   transform: translateY(-2px);
-
   box-shadow:
     0 1px 0 rgba(255, 255, 255, 0.5) inset,
     0 10px 20px rgba(55, 25, 125, 0.1);
@@ -998,7 +757,6 @@ textarea {
   box-shadow:
     0 4px 10px rgba(36, 20, 85, 0.04),
     0 18px 35px var(--glass-shadow);
-
   transition:
     transform 400ms cubic-bezier(0.2, 0.8, 0.2, 1),
     box-shadow 400ms ease;
@@ -1006,11 +764,9 @@ textarea {
 
 .atp-examples-grid .atp-preview-stage {
   position: relative;
-
   background:
     radial-gradient(
       ellipse at 50% 80%,
-
       rgba(129, 86, 237, 0.2),
       transparent 65%
     ),
@@ -1019,13 +775,10 @@ textarea {
 
 .atp-examples-grid .atp-browser {
   position: relative;
-
   box-shadow:
     0 8px 15px rgba(38, 22, 86, 0.08),
     0 25px 50px rgba(38, 22, 86, 0.2);
-
   transform: translateY(-4px);
-
   transition:
     transform 450ms cubic-bezier(0.2, 0.8, 0.2, 1),
     box-shadow 450ms ease;
@@ -1034,15 +787,12 @@ textarea {
 @media (hover: hover) {
   .atp-examples-grid .atp-card:hover {
     transform: translateY(-7px);
-
     box-shadow:
       0 12px 20px rgba(38, 22, 86, 0.08),
       0 30px 65px var(--glass-shadow);
   }
-
   .atp-examples-grid .atp-card:hover .atp-browser {
     transform: translateY(-12px) rotateX(3deg) scale(1.035);
-
     box-shadow:
       0 20px 30px rgba(38, 22, 86, 0.13),
       0 40px 70px rgba(38, 22, 86, 0.24);
@@ -1065,7 +815,6 @@ textarea {
   100% {
     transform: translateY(0);
   }
-
   50% {
     transform: translateY(-9px);
   }
@@ -1075,7 +824,6 @@ textarea {
 
 #learn-section img {
   filter: drop-shadow(0 22px 20px rgba(50, 25, 110, 0.2));
-
   animation: atp-book-float 8s ease-in-out infinite;
 }
 
@@ -1084,7 +832,6 @@ textarea {
   100% {
     transform: translateY(0);
   }
-
   50% {
     transform: translateY(-10px);
   }
@@ -1094,9 +841,7 @@ textarea {
 
 #contact-section > div {
   position: relative;
-
   isolation: isolate;
-
   box-shadow:
     0 12px 20px rgba(67, 38, 150, 0.15),
     0 30px 65px rgba(67, 38, 150, 0.18),
@@ -1105,17 +850,11 @@ textarea {
 
 #contact-section > div::before {
   content: "";
-
   position: absolute;
-
   inset: 0;
-
   z-index: -1;
-
   border-radius: inherit;
-
   pointer-events: none;
-
   background: linear-gradient(
     115deg,
     rgba(255, 255, 255, 0.17),
@@ -1128,7 +867,6 @@ textarea {
 .atp-site a:focus-visible,
 .atp-site button:focus-visible {
   outline: 3px solid var(--site-accent);
-
   outline-offset: 4px;
 }
 
@@ -1137,7 +875,6 @@ textarea {
   #learn-section img {
     animation: none !important;
   }
-
   .atp-services-grid .atp-card,
   .atp-examples-grid .atp-card,
   .atp-examples-grid .atp-browser {
@@ -1153,20 +890,25 @@ textarea {
 }
 
 /* ========================================
+
    DIMENSIONAL REDESIGN — SHARED LIGHTING
+
 ======================================== */
+
 .atp-site {
   --atp-depth-shadow:
     0 18px 34px rgba(56, 31, 119, 0.1), 0 42px 80px rgba(56, 31, 119, 0.1);
   --atp-depth-edge: rgba(255, 255, 255, 0.82);
   --atp-depth-tint: rgba(128, 86, 242, 0.1);
 }
+
 .site-dark .atp-site {
   --atp-depth-shadow:
     0 20px 38px rgba(0, 0, 0, 0.26), 0 44px 90px rgba(0, 0, 0, 0.24);
   --atp-depth-edge: rgba(255, 255, 255, 0.12);
   --atp-depth-tint: rgba(147, 104, 255, 0.18);
 }
+
 .atp-site #services-section,
 .atp-site #examples-section,
 .atp-site #process-section,
@@ -1175,6 +917,7 @@ textarea {
   position: relative;
   isolation: isolate;
 }
+
 .atp-site #services-section::before,
 .atp-site #process-section::before {
   content: "";
@@ -1187,10 +930,13 @@ textarea {
   right: -12%;
   background: radial-gradient(circle, var(--atp-depth-tint), transparent 68%);
 }
+
 /* Hero: the existing straight-on laptop remains untouched. */
+
 .atp-laptop-scene {
   isolation: isolate;
 }
+
 .atp-hero-float {
   position: absolute;
   z-index: 5;
@@ -1211,20 +957,24 @@ textarea {
   pointer-events: none;
   animation: atp-floating-chip 6s ease-in-out infinite;
 }
+
 .atp-hero-float strong,
 .atp-hero-float small {
   display: block;
   white-space: nowrap;
 }
+
 .atp-hero-float strong {
   font-size: 11px;
   font-weight: 800;
 }
+
 .atp-hero-float small {
   font-size: 9px;
   color: #756b8d;
   margin-top: 2px;
 }
+
 .atp-float-icon {
   display: grid;
   place-items: center;
@@ -1234,23 +984,28 @@ textarea {
   color: #6532d6;
   background: #eee5ff;
 }
+
 .atp-float-icon--green {
   color: #13875c;
   background: #dff8ed;
 }
+
 .atp-hero-float--left {
   left: -7%;
   bottom: 9%;
   transform: rotate(-5deg);
 }
+
 .atp-hero-float--right {
   right: -5%;
   top: 4%;
   animation-delay: -3s;
 }
+
 .atp-original-hero-badge {
   display: none !important;
 }
+
 @keyframes atp-floating-chip {
   0%,
   100% {
@@ -1260,10 +1015,13 @@ textarea {
     translate: 0 -9px;
   }
 }
+
 /* Service cards: stronger silhouette, glass highlights, lifted icons. */
+
 .atp-services-grid {
   padding-block: 12px 24px;
 }
+
 .atp-site .atp-services-grid .atp-service-card {
   overflow: visible;
   border: 1px solid var(--atp-depth-edge);
@@ -1278,6 +1036,7 @@ textarea {
   transform: translateY(-7px);
   border-radius: 22px;
 }
+
 .atp-service-icon {
   position: relative;
   z-index: 2;
@@ -1295,9 +1054,11 @@ textarea {
     0 12px 23px rgba(87, 47, 167, 0.17),
     inset 0 1px var(--atp-depth-edge);
 }
+
 .atp-service-card > div:first-child {
   margin-top: 23px;
 }
+
 @media (hover: hover) {
   .atp-site .atp-services-grid .atp-service-card:hover {
     transform: translateY(-16px) rotateX(2deg) rotateY(-1deg);
@@ -1307,11 +1068,14 @@ textarea {
       0 50px 85px rgba(71, 37, 142, 0.13);
   }
 }
+
 /* Example windows: visually elevated inside recessed stages. */
+
 .atp-examples-grid .atp-preview-stage {
   isolation: isolate;
   overflow: hidden;
 }
+
 .atp-preview-halo {
   position: absolute;
   inset: 18% 8% -42%;
@@ -1324,6 +1088,7 @@ textarea {
   );
   filter: blur(18px);
 }
+
 .atp-examples-grid .atp-browser {
   z-index: 2;
   transform: translateY(-9px) rotateX(2deg);
@@ -1332,18 +1097,23 @@ textarea {
     0 22px 26px rgba(36, 22, 86, 0.15),
     0 42px 62px rgba(36, 22, 86, 0.2);
 }
+
 .atp-site .atp-examples-grid .atp-card {
   border: 1px solid var(--atp-depth-edge);
   box-shadow: var(--atp-depth-shadow);
 }
+
 /* Process: raised connected steps rather than plain text columns. */
+
 .atp-process-section {
   background: var(--site-surface);
 }
+
 .atp-process-grid {
   position: relative;
   padding: 12px 0 20px;
 }
+
 .atp-process-grid::before {
   content: "";
   position: absolute;
@@ -1352,6 +1122,7 @@ textarea {
   top: 53px;
   border-top: 2px dashed color-mix(in srgb, var(--site-accent) 30%, transparent);
 }
+
 .atp-process-card {
   position: relative;
   z-index: 1;
@@ -1371,11 +1142,13 @@ textarea {
     transform 0.35s ease,
     box-shadow 0.35s ease;
 }
+
 .atp-process-topline {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .atp-process-icon {
   display: grid;
   place-items: center;
@@ -1389,22 +1162,27 @@ textarea {
     0 10px 22px rgba(92, 54, 177, 0.16),
     inset 0 1px var(--atp-depth-edge);
 }
+
 .atp-process-number {
   font-size: 38px;
   font-weight: 900;
   letter-spacing: -0.07em;
   color: color-mix(in srgb, var(--site-accent) 27%, var(--site-surface));
 }
+
 @media (hover: hover) {
   .atp-process-card:hover {
     transform: translateY(-9px);
     box-shadow: 0 30px 60px rgba(62, 31, 132, 0.19);
   }
 }
+
 /* About: actual overlapping cards and decorative orbit lines. */
+
 .atp-about-section {
   background: linear-gradient(130deg, var(--site-soft), var(--site-hero));
 }
+
 .atp-about-visual {
   position: relative;
   min-height: 390px;
@@ -1413,6 +1191,7 @@ textarea {
   justify-content: center;
   isolation: isolate;
 }
+
 .atp-about-orbit {
   position: absolute;
   width: 320px;
@@ -1421,11 +1200,13 @@ textarea {
   border: 1px solid color-mix(in srgb, var(--site-accent) 18%, transparent);
   transform: rotate(-20deg) scaleY(0.72);
 }
+
 .atp-about-orbit--two {
   transform: rotate(35deg) scaleY(0.72);
   width: 370px;
   height: 370px;
 }
+
 .atp-about-main-card {
   position: relative;
   z-index: 2;
@@ -1442,11 +1223,13 @@ textarea {
     0 48px 75px rgba(61, 36, 119, 0.13);
   transform: rotate(-3deg);
 }
+
 .atp-about-card-head {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .atp-about-icon {
   display: grid;
   place-items: center;
@@ -1457,18 +1240,21 @@ textarea {
   color: var(--site-accent);
   box-shadow: 0 8px 22px rgba(90, 53, 168, 0.13);
 }
+
 .atp-about-dots {
   color: var(--site-accent);
   opacity: 0.45;
   letter-spacing: 4px;
   font-size: 9px;
 }
+
 .atp-about-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 7px;
   margin-top: 20px;
 }
+
 .atp-about-tags span {
   border-radius: 999px;
   padding: 6px 9px;
@@ -1477,6 +1263,7 @@ textarea {
   background: var(--site-soft);
   color: var(--site-accent);
 }
+
 .atp-about-mini {
   position: absolute;
   z-index: 3;
@@ -1493,20 +1280,25 @@ textarea {
   box-shadow: 0 16px 28px rgba(58, 31, 128, 0.17);
   backdrop-filter: blur(18px);
 }
+
 .atp-about-mini svg {
   color: var(--site-accent);
 }
+
 .atp-about-mini--top {
   top: 16px;
   right: -5px;
   transform: rotate(5deg);
 }
+
 .atp-about-mini--bottom {
   bottom: 16px;
   left: -10px;
   transform: rotate(-5deg);
 }
+
 /* Course: recessed base with the existing book projecting out. */
+
 .atp-course-panel {
   position: relative;
   isolation: isolate;
@@ -1518,6 +1310,7 @@ textarea {
     0 20px 38px rgba(60, 33, 125, 0.1),
     0 40px 75px rgba(60, 33, 125, 0.09);
 }
+
 .atp-course-panel::before {
   content: "";
   position: absolute;
@@ -1527,9 +1320,11 @@ textarea {
   border: 1px solid color-mix(in srgb, var(--site-accent) 9%, transparent);
   border-radius: 18px;
 }
+
 .atp-course-art {
   isolation: isolate;
 }
+
 .atp-course-ring {
   position: absolute;
   z-index: -1;
@@ -1544,6 +1339,7 @@ textarea {
   );
   border: 1px solid color-mix(in srgb, var(--site-accent) 16%, transparent);
 }
+
 .atp-course-chip {
   position: absolute;
   z-index: 3;
@@ -1562,14 +1358,18 @@ textarea {
   backdrop-filter: blur(16px);
   box-shadow: 0 15px 35px rgba(67, 37, 137, 0.16);
 }
+
 .atp-course-chip svg {
   color: var(--site-accent);
 }
+
 /* Contact: glossy panel with stronger elevation and a specular highlight. */
+
 .atp-contact-panel {
   overflow: hidden;
   transform: translateY(-5px);
 }
+
 .atp-contact-panel::after {
   content: "";
   position: absolute;
@@ -1585,11 +1385,14 @@ textarea {
   );
   pointer-events: none;
 }
+
 .atp-contact-panel > div {
   position: relative;
   z-index: 2;
 }
+
 /* Mobile and accessibility */
+
 @media (max-width: 767px) {
   .atp-hero-float {
     display: none;
@@ -1620,6 +1423,7 @@ textarea {
     padding-top: 24px;
   }
 }
+
 @media (prefers-reduced-motion: reduce) {
   .atp-hero-float {
     animation: none !important;
@@ -1627,5 +1431,332 @@ textarea {
   .atp-process-card,
   .atp-about-main-card {
     transition: none !important;
+  }
+}
+
+/* ===========================================================
+
+   MIDNIGHT BLUE + ELECTRIC CYAN — unified visual palette
+
+   Light: bright icy surfaces. Dark: layered deep-ocean glass.
+
+   Existing interactions, geometry, and 3D movement are retained.
+
+=========================================================== */
+
+.atp-site {
+  --site-bg: #e6eff6;
+  --site-surface: #ffffff;
+  --site-text: #10243e;
+  --site-muted: #526b83;
+  --site-border: #c9dceb;
+  --site-soft: #eaf6fc;
+  --site-accent: #1768df;
+  --site-accent-hover: #1055b9;
+  --site-hero: #f1f8fd;
+  --atp-depth-edge: rgba(60, 142, 184, 0.22);
+  --atp-depth-shadow:
+    0 12px 24px rgba(8, 48, 80, 0.08), 0 32px 70px rgba(8, 48, 80, 0.12);
+  --glass-border: rgba(255, 255, 255, 0.78);
+  --glass-shadow: rgba(10, 54, 88, 0.15);
+  --depth-highlight: rgba(255, 255, 255, 0.95);
+}
+
+.site-dark .atp-site {
+  --site-bg: #071321;
+  --site-surface: #10243a;
+  --site-text: #f0faff;
+  --site-muted: #b4cdda;
+  --site-border: #2c5068;
+  --site-soft: #14334a;
+  --site-accent: #49d8f0;
+  --site-accent-hover: #7deaf5;
+  --site-hero: #132d45;
+  --atp-depth-edge: rgba(88, 204, 231, 0.23);
+  --atp-depth-shadow:
+    0 12px 28px rgba(0, 0, 0, 0.23), 0 36px 72px rgba(0, 0, 0, 0.28);
+  --glass-border: rgba(118, 215, 237, 0.22);
+  --glass-shadow: rgba(0, 0, 0, 0.36);
+  --depth-highlight: rgba(139, 224, 243, 0.1);
+}
+
+/* A deliberate dark/light rhythm makes the raised elements pop. */
+
+.atp-site #services-section {
+  background: linear-gradient(
+    160deg,
+    var(--site-surface) 0%,
+    var(--site-hero) 100%
+  );
+}
+
+.atp-site #examples-section {
+  --site-text: #f1faff;
+  --site-muted: #bbd3e4;
+  --site-border: #37607b;
+  --site-soft: #173b56;
+  --site-hero: #0d2a43;
+  --site-accent: #58e3ef;
+  background:
+    radial-gradient(
+      ellipse at 85% 5%,
+      rgba(25, 153, 190, 0.25),
+      transparent 48%
+    ),
+    linear-gradient(145deg, #08192b, #123b5b 62%, #0b263c);
+  color: #f1faff;
+}
+
+.atp-site #examples-section .atp-card {
+  background: rgba(20, 52, 76, 0.88);
+  border-color: rgba(116, 211, 234, 0.24);
+  box-shadow:
+    0 18px 40px rgba(0, 10, 26, 0.35),
+    0 35px 72px rgba(0, 10, 26, 0.22);
+}
+
+.atp-site #examples-section .atp-preview-stage {
+  background:
+    radial-gradient(
+      circle at 50% 45%,
+      rgba(54, 211, 224, 0.21),
+      transparent 68%
+    ),
+    linear-gradient(145deg, #173b59, #0b243a);
+}
+
+/* Keep browser content light and legible even in the dark showcase. */
+
+.atp-site #examples-section .atp-browser {
+  --preview-surface: #ffffff;
+  --preview-subtle: #f1f8fd;
+  --preview-text: #10243e;
+  --preview-muted: #6b8399;
+  --preview-border: #d8e7f1;
+}
+
+.atp-site #process-section {
+  background: linear-gradient(160deg, var(--site-surface), var(--site-hero));
+}
+
+.atp-site .atp-process-grid::before {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #25b6d7,
+    #236bdf,
+    transparent
+  );
+}
+
+.atp-site .atp-process-card,
+.atp-site .atp-about-main-card {
+  border-color: var(--atp-depth-edge);
+  box-shadow: var(--atp-depth-shadow);
+}
+
+.atp-site .atp-about-section {
+  background:
+    radial-gradient(
+      circle at 85% 40%,
+      rgba(35, 183, 213, 0.14),
+      transparent 44%
+    ),
+    linear-gradient(130deg, var(--site-soft), var(--site-hero));
+}
+
+.atp-site .atp-course-panel {
+  background: linear-gradient(125deg, var(--site-hero), var(--site-soft));
+  border-color: var(--atp-depth-edge);
+  box-shadow:
+    0 18px 35px rgba(8, 59, 95, 0.1),
+    0 40px 75px rgba(8, 59, 95, 0.11);
+}
+
+.atp-site .atp-course-ring {
+  background: radial-gradient(
+    circle,
+    rgba(48, 204, 225, 0.26),
+    rgba(35, 107, 223, 0.08) 55%,
+    transparent 73%
+  );
+}
+
+.atp-site .atp-hero-float,
+.atp-site .atp-about-mini,
+.atp-site .atp-course-chip {
+  border-color: rgba(95, 204, 232, 0.35);
+  box-shadow: 0 16px 34px rgba(5, 35, 68, 0.22);
+}
+
+.atp-site .atp-float-icon {
+  background: #dff6fa;
+  color: #1267a8;
+}
+
+.atp-site .atp-float-icon--green {
+  background: #ddf9ec;
+  color: #13875c;
+}
+
+.atp-site .atp-laptop-glow {
+  background: radial-gradient(
+    ellipse,
+    rgba(54, 221, 232, 0.44),
+    rgba(30, 105, 215, 0.19) 55%,
+    transparent 77%
+  );
+}
+
+.atp-site .atp-preview-halo {
+  background: radial-gradient(
+    ellipse,
+    rgba(46, 210, 230, 0.28),
+    transparent 70%
+  );
+}
+
+.atp-site .atp-primary {
+  background: #236bdf;
+  color: #ffffff;
+  box-shadow:
+    0 8px 20px rgba(11, 74, 157, 0.24),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+.atp-site .atp-primary:hover {
+  background: #1258c4;
+}
+
+.atp-site .atp-contact-panel {
+  background: linear-gradient(110deg, #103d71 0%, #1768b3 52%, #0a9bb1 100%);
+  box-shadow:
+    0 16px 30px rgba(10, 59, 104, 0.18),
+    0 35px 75px rgba(5, 74, 113, 0.2);
+}
+
+.site-dark .atp-site #services-section,
+.site-dark .atp-site #process-section {
+  background: linear-gradient(160deg, #10243a, #112d43);
+}
+
+.site-dark .atp-site #examples-section {
+  background:
+    radial-gradient(
+      ellipse at 85% 5%,
+      rgba(25, 153, 190, 0.25),
+      transparent 48%
+    ),
+    linear-gradient(145deg, #061321, #0e304a);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .atp-site .atp-laptop-perspective,
+  .atp-site #learn-section img {
+    animation: none !important;
+  }
+}
+
+/* =========================================
+
+   MOBILE NAVBAR — ALWAYS VISIBLE
+
+   ========================================= */
+
+@media (max-width: 767px) {
+  /* Reserve space for the fixed navbar */
+  .atp-page-frame {
+    padding-top: 78px;
+  }
+  /* Keep navbar visible while scrolling */
+  .atp-site .atp-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 90;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 0;
+    background: var(--site-surface);
+    transition:
+      top 300ms ease,
+      width 300ms ease,
+      border-radius 300ms ease,
+      background-color 300ms ease,
+      box-shadow 300ms ease,
+      border-color 300ms ease;
+  }
+  /* Detached navbar after scrolling */
+  .atp-site .atp-header--floating {
+    top: 10px;
+    left: 0;
+    right: 0;
+    width: calc(100% - 24px);
+    max-width: 600px;
+    border: 1px solid var(--glass-border);
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--site-surface) 88%, transparent);
+    backdrop-filter: blur(22px) saturate(160%);
+    -webkit-backdrop-filter: blur(22px) saturate(160%);
+    box-shadow:
+      0 1px 0 var(--depth-highlight) inset,
+      0 8px 20px rgba(4, 24, 47, 0.12),
+      0 20px 45px rgba(4, 24, 47, 0.2);
+  }
+  /* Slightly shorter when detached */
+  .atp-site .atp-header--floating .atp-header-inner {
+    min-height: 62px;
+    padding-inline: 20px;
+  }
+  /* Ensure the mobile menu stays above the navbar */
+  #atp-mobile-navigation {
+    z-index: 100;
+  }
+}
+
+/* Mobile navigation: attached at the top, detached after scrolling. */
+@media (max-width: 767px) {
+  .atp-page-frame {
+    padding-top: 78px;
+  }
+  .atp-site .atp-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 90;
+    width: 100%;
+    margin-inline: auto;
+    border-radius: 0;
+    background: var(--site-surface);
+    transition:
+      top 300ms ease,
+      width 300ms ease,
+      border-radius 300ms ease,
+      background-color 300ms ease,
+      box-shadow 300ms ease,
+      border-color 300ms ease;
+  }
+  .atp-site .atp-header.atp-header--floating {
+    top: 10px;
+    width: calc(100% - 24px);
+    max-width: 600px;
+    border: 1px solid var(--glass-border);
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--site-surface) 88%, transparent);
+    backdrop-filter: blur(22px) saturate(160%);
+    -webkit-backdrop-filter: blur(22px) saturate(160%);
+    box-shadow:
+      inset 0 1px 0 var(--depth-highlight),
+      0 8px 20px rgba(4, 24, 47, 0.12),
+      0 20px 45px rgba(4, 24, 47, 0.2);
+  }
+  .atp-site .atp-header.atp-header--floating .atp-header-inner {
+    min-height: 62px;
+    padding-inline: 20px;
+  }
+  #atp-mobile-navigation {
+    z-index: 100;
   }
 }
