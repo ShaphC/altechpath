@@ -1526,3 +1526,16 @@ body {
     overflow-x: clip;
   }
 }
+
+/* Desktop page width */
+@media (min-width: 1024px) {
+  .atp-site {
+    padding: 24px 60px;
+  }
+
+  .atp-site .atp-page-frame {
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
+  }
+}
